@@ -1,3 +1,5 @@
+mod device;
+
 use std::path::Path;
 use std::process::ExitCode;
 
@@ -5,8 +7,21 @@ use lf_lit::{Container, Document, Registry};
 
 const USAGE: &str = "\
 usage:
-  lf lit dump FILE            print a .lit/.litsettings document as JSON
-  lf lit roundtrip FILE...    read each file, write it back, and compare";
+  lf lit dump FILE                 print a .lit/.litsettings document as JSON
+  lf lit roundtrip FILE...         read each file, write it back, and compare
+
+  lf device discover [--timeout SECONDS] [--host IP]...
+                                   find devices on the local network
+  lf device status HOST [--seconds N] [--trace] [--no-ack]
+                                   connect, subscribe and print the state the
+                                   device pushes; --trace hex-dumps frames
+                                   that don't decode cleanly; --no-ack skips
+                                   acknowledging pushes (the ack is inferred)
+  lf device play|pause|stop|next|prev HOST
+  lf device slide HOST INDEX
+  lf device brightness HOST VALUE  0.0 to 1.0
+
+HOST is an IP address or name, optionally with :PORT (default: 50050, then 50051).";
 
 fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
@@ -14,6 +29,13 @@ fn main() -> ExitCode {
     let result = match args.as_slice() {
         ["lit", "dump", file] => dump(Path::new(file)),
         ["lit", "roundtrip", files @ ..] if !files.is_empty() => roundtrip(files),
+        ["device", rest @ ..] => match device::run(rest) {
+            Some(result) => result,
+            None => {
+                eprintln!("{USAGE}");
+                return ExitCode::from(2);
+            }
+        },
         _ => {
             eprintln!("{USAGE}");
             return ExitCode::from(2);
@@ -23,7 +45,7 @@ fn main() -> ExitCode {
         Ok(true) => ExitCode::SUCCESS,
         Ok(false) => ExitCode::FAILURE,
         Err(e) => {
-            eprintln!("lf: {e}");
+            eprintln!("lf: {}", device::clean(&e.to_string()));
             ExitCode::FAILURE
         }
     }

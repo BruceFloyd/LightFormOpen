@@ -1,0 +1,1171 @@
+// recovered from embedded FileDescriptorProto
+syntax = "proto3";
+package metarpc;
+
+enum ErrorType {
+  ERRORTYPE_UNKNOWN = 0;
+  ERRORTYPE_NO_ERROR = -1;
+  ERRORTYPE_JSON_RPC_PARSE_ERROR = -32700;
+  ERRORTYPE_JSON_RPC_INVALID_REQUEST = -32600;
+  ERRORTYPE_JSON_RPC_METHOD_NOT_FOUND = -32601;
+  ERRORTYPE_JSON_RPC_INVALID_PARMS = -32602;
+  ERRORTYPE_JSON_RPC_INTERNAL_ERROR = -32603;
+  ERRORTYPE_KNOWN_ISSUE = -2;
+  ERRORTYPE_DEVICE_OFFLINE = 1;
+  ERRORTYPE_SLIDE_INDEX_OUT_OF_BOUNDS = 1001;
+  ERRORTYPE_NO_PROJECT_LOADED = 1002;
+  ERRORTYPE_INVALID_PARAMETER_VALUE = 1003;
+  ERRORTYPE_INVALID_PARAMETER_NAME = 1004;
+  ERRORTYPE_INVALID_PARAMETER_TYPE = 1005;
+  ERRORTYPE_INVALID_CONTENT_URI = 1006;
+  ERRORTYPE_INVALID_PROJECT_ID = 1007;
+  ERRORTYPE_SCAN_IN_PROGRESS = 1100;
+  ERRORTYPE_NO_SCAN_DATA_AVAILABLE = 1101;
+  ERRORTYPE_FAILED_DETECTING_PATTERNS = 1102;
+  ERRORTYPE_NO_CAMERA_DETECTED = 1201;
+  ERRORTYPE_CAMERA_INITIALIZING = 1202;
+  ERRORTYPE_PUBLISH_IN_PROGRESS = 1301;
+  ERRORTYPE_INVALID_OBJECT_ID = 1401;
+  ERRORTYPE_INTERNAL_ERROR = 10000;
+  ERRORTYPE_USER_CANCELED = 10001;
+  ERRORTYPE_REMOTE_UPLOAD_FAILED = 10002;
+  ERRORTYPE_CAMERA_CAPTURE_FAILED = 10003;
+  ERRORTYPE_CAMERA_MODEL_NOT_SUPPORTED = 10004;
+  ERRORTYPE_DISPLAY_DISCONNECTED = 10005;
+}
+
+enum ScanState {
+  SCANSTATE_UNKNOWN = 0;
+  SCANSTATE_READY = 1;
+  SCANSTATE_INITIALIZING = 2;
+  SCANSTATE_CALIBRATING = 3;
+  SCANSTATE_SCANNING = 4;
+  SCANSTATE_PROCESSING = 5;
+  SCANSTATE_UPLOADING = 6;
+}
+
+enum OaklightMode {
+  OAKLIGHTMODE_UNKNOWN = 0;
+  OAKLIGHTMODE_ENVIRONMENT_OCTOMASK = 1;
+  OAKLIGHTMODE_OBJECT_ALIGNMENT = 2;
+  OAKLIGHTMODE_PERSPECTIVE = 3;
+}
+
+enum ProjectType {
+  PROJECTTYPE_UNKNOWN = 0;
+  PROJECTTYPE_CREATOR_PROJECT = 1;
+  PROJECTTYPE_OBJECTS_PROJECT = 2;
+  PROJECTTYPE_ENVIRONMENT_PROJECT = 3;
+}
+
+enum GeometryCorrectionMode {
+  GEOMETRYCORRECTIONMODE_UNKNOWN = 0;
+  GEOMETRYCORRECTIONMODE_OFF = 1;
+  GEOMETRYCORRECTIONMODE_KEYSTONE = 2;
+  GEOMETRYCORRECTIONMODE_CORNER = 3;
+}
+
+enum DataFlag {
+  option allow_alias = true;
+  DATAFLAG_UNKNOWN = 0;
+  DATAFLAG_DISPLAY_STATE = 1;
+  DATAFLAG_NETWORK_STATE = 2;
+  DATAFLAG_DEVICE_STATE = 4;
+  DATAFLAG_FIRMWARE_STATE = 8;
+  DATAFLAG_OTA_STATE = 16;
+  DATAFLAG_DEVICE_CONFIG = 32;
+  DATAFLAG_PLAYBACK_STATE = 64;
+  DATAFLAG_PLAYBACK_PARAMETERS = 128;
+  DATAFLAG_RENDERER_SETTINGS = 256;
+  DATAFLAG_RENDERER_STRUCTURE = 512;
+  DATAFLAG_SCAN_STATE = 1024;
+  DATAFLAG_LIVELIGHT_STATE = 2048;
+  DATAFLAG_AUDIO_REACTIVITY_SETTINGS = 4096;
+  DATAFLAG_FIRST = 1;
+  DATAFLAG_LAST = 4096;
+  DATAFLAG_NONE = 0;
+  DATAFLAG_ALL = 8191;
+}
+
+enum HDMICableState {
+  HDMICABLESTATE_UNKNOWN = 0;
+  HDMICABLESTATE_PLUGGED_IN = 1;
+  HDMICABLESTATE_UNPLUGGED = 2;
+}
+
+enum LEDColor {
+  LEDCOLOR_UNKNOWN = 0;
+  LEDCOLOR_RED = 1;
+  LEDCOLOR_GREEN = 2;
+  LEDCOLOR_BLUE = 3;
+  LEDCOLOR_CYAN = 4;
+  LEDCOLOR_YELLOW = 5;
+  LEDCOLOR_MAGENTA = 6;
+  LEDCOLOR_WHITE = 7;
+  LEDCOLOR_BLACK = 8;
+}
+
+enum PlaybackStatus {
+  PLAYBACKSTATUS_UNKNOWN = 0;
+  PLAYBACKSTATUS_PLAYING = 1;
+  PLAYBACKSTATUS_STOPPED = 2;
+  PLAYBACKSTATUS_IDLE = 3;
+  PLAYBACKSTATUS_UPLOADING = 4;
+  PLAYBACKSTATUS_DOWN = 5;
+  PLAYBACKSTATUS_PAUSED = 6;
+}
+
+enum TestcardStatus {
+  TESTCARDSTATUS_UNKNOWN = 0;
+  TESTCARDSTATUS_ENABLED = 1;
+  TESTCARDSTATUS_DISABLED = 2;
+}
+
+enum WifiSecurity {
+  WIFISECURITY_UNKNOWN = 0;
+  WIFISECURITY_WEP = 1;
+  WIFISECURITY_WPA = 2;
+  WIFISECURITY_WPA2 = 3;
+  WIFISECURITY_UNSECURED = 4;
+}
+
+enum ConnectionType {
+  CONNECTIONTYPE_UNKNOWN = 0;
+  CONNECTIONTYPE_DISCONNECTED = 1;
+  CONNECTIONTYPE_ETHERNET = 2;
+  CONNECTIONTYPE_WIFI = 3;
+}
+
+enum ConnectionMode {
+  CONNECTIONMODE_UNKNOWN = 0;
+  CONNECTIONMODE_CLIENT = 1;
+  CONNECTIONMODE_ACCESS_POINT = 2;
+}
+
+enum OTAStatus {
+  OTASTATUS_UNKNOWN = 0;
+  OTASTATUS_IDLE = 1;
+  OTASTATUS_DOWNLOADING = 2;
+  OTASTATUS_FLASHING = 3;
+  OTASTATUS_CHECKING_MD5 = 4;
+  OTASTATUS_READY_TO_INSTALL = 5;
+  OTASTATUS_ERROR = 6;
+}
+
+enum OSCAddressChangeType {
+  OSCADDRESSCHANGETYPE_UNKNOWN = 0;
+  OSCADDRESSCHANGETYPE_ADD = 1;
+  OSCADDRESSCHANGETYPE_REMOVE = 2;
+  OSCADDRESSCHANGETYPE_REPLACE = 3;
+}
+
+enum StructureGridPointUpdateType {
+  STRUCTUREGRIDPOINTUPDATETYPE_UNKNOWN = 0;
+  STRUCTUREGRIDPOINTUPDATETYPE_VERTEX = 1;
+  STRUCTUREGRIDPOINTUPDATETYPE_UP = 2;
+  STRUCTUREGRIDPOINTUPDATETYPE_DOWN = 3;
+  STRUCTUREGRIDPOINTUPDATETYPE_LEFT = 4;
+  STRUCTUREGRIDPOINTUPDATETYPE_RIGHT = 5;
+}
+
+enum ProjectionMode {
+  PROJECTIONMODE_UNKNOWN = 0;
+  PROJECTIONMODE_FRONT = 1;
+  PROJECTIONMODE_FRONT_CEILING = 2;
+  PROJECTIONMODE_REAR = 3;
+  PROJECTIONMODE_REAR_CEILING = 4;
+}
+
+enum CameraModel {
+  CAMERAMODEL_UNKNOWN = 0;
+  CAMERAMODEL_NONE = 1;
+  CAMERAMODEL_LF1 = 2;
+  CAMERAMODEL_LF2 = 3;
+  CAMERAMODEL_LOGITECH_BRIO = 4;
+  CAMERAMODEL_UNSUPPORTED = 5;
+}
+
+enum TestcardMode {
+  TESTCARDMODE_DARK = 0;
+  TESTCARDMODE_LIGHT = 1;
+}
+
+message Result {
+  string result = 215384898;
+}
+
+message Error {
+  metarpc.ErrorType type = 81981970;
+  string message = 347320500;
+}
+
+message Response {
+  metarpc.Result result = 215384898;
+  metarpc.Error error = 111540978;
+}
+
+message IntPoint {
+  int32 x = 492162144;
+  int32 y = 129745258;
+}
+
+message Rectangle {
+  metarpc.IntPoint topleft = 210635498;
+  metarpc.IntPoint bottomright = 430623250;
+}
+
+message PlaybackParameter {
+  string name = 304490340;
+  string type = 81981970;
+  string value = 151951315;
+  string minValue = 112017862;
+  string maxValue = 352254591;
+  string defaultValue = 67324209;
+  string controlType = 171213639;
+  repeated string labels = 249603133;
+  repeated string values = 90497774;
+  repeated string addresses = 109566230;
+}
+
+message SlidePlaybackParameters {
+  string name = 304490340;
+  repeated metarpc.PlaybackParameter parameters = 325586613;
+}
+
+message PlaybackParameters {
+  repeated metarpc.PlaybackParameter globalParameters = 85537360;
+  repeated metarpc.SlidePlaybackParameters slides = 338644969;
+}
+
+message ProjectSlide {
+  string name = 304490340;
+  double duration = 44491079;
+  string thumbnail = 462055786;
+  string description = 48993594;
+  string category = 330776452;
+}
+
+message ProjectMetadata {
+  string name = 304490340;
+  string id = 433005631;
+  string timestamp = 143372168;
+  string description = 48993594;
+  repeated metarpc.ProjectSlide slides = 338644969;
+  metarpc.ProjectType type = 81981970;
+}
+
+message AudioReactivityEffect {
+  string id = 433005631;
+  bool enabled = 522274146;
+}
+
+message AudioReactivityFrequencySetting {
+  bool gainEnabled = 54590214;
+  bool accumulationEnabled = 508413180;
+  double gain = 112291670;
+  double accumulation = 147590875;
+  repeated metarpc.AudioReactivityEffect effects = 71243828;
+}
+
+message AudioReactivitySettings {
+  metarpc.AudioReactivityFrequencySetting low = 166019321;
+  metarpc.AudioReactivityFrequencySetting mid = 910786;
+  metarpc.AudioReactivityFrequencySetting midhigh = 454179493;
+  metarpc.AudioReactivityFrequencySetting high = 475704371;
+  metarpc.AudioReactivityFrequencySetting global = 344550308;
+  double attack = 275333617;
+  double release = 498632342;
+}
+
+message UIntColor {
+  uint32 alpha = 18690939;
+  uint32 red = 454910414;
+  uint32 green = 519857144;
+  uint32 blue = 485938403;
+}
+
+message VectorMaskPoint {
+  metarpc.IntPoint location = 302789407;
+  metarpc.IntPoint controlPoint1 = 360360588;
+  metarpc.IntPoint controlPoint2 = 442644567;
+}
+
+message VectorPath {
+  repeated metarpc.VectorMaskPoint points = 88772036;
+}
+
+message VectorMask {
+  repeated metarpc.VectorPath paths = 374483622;
+  metarpc.UIntColor fillColor = 140108112;
+  metarpc.UIntColor strokeColor = 208253494;
+  uint32 strokeWidth = 527409854;
+}
+
+message VectorScene {
+  repeated metarpc.VectorMask masks = 477193605;
+}
+
+message Keystone {
+  int32 ltr = 84366590;
+  int32 ttb = 105209829;
+}
+
+message KeystoneCorners {
+  metarpc.IntPoint topLeft = 276664812;
+  metarpc.IntPoint topRight = 437268837;
+  metarpc.IntPoint bottomLeft = 452139310;
+  metarpc.IntPoint bottomRight = 136336118;
+}
+
+message GeometryCorrection {
+  metarpc.GeometryCorrectionMode mode = 410846565;
+  metarpc.Keystone keystone = 289205765;
+  metarpc.KeystoneCorners corners = 270402648;
+}
+
+message StartScanSettings {
+  int32 hdrExposures = 336476607;
+  bool smoothCorrespondences = 235884428;
+  bool noiseReduction = 220747235;
+  bool safeMode = 83845495;
+  bool planarScan = 432944591;
+  bool debug = 140003186;
+  metarpc.Rectangle cameraMask = 262634033;
+  bool useExisting = 314699279;
+  bool remoteUpload = 9647172;
+  bool isCreatorScan = 309151397;
+  bool analyzeObjects = 446687423;
+  bool analyzeEnvironment = 243375018;
+  string objectId = 416601061;
+  bool cancelInProgressScan = 433451103;
+}
+
+message CornerPinCoordinates {
+  repeated metarpc.IntPoint vertices = 534683186;
+  repeated metarpc.IntPoint texCoords = 403338142;
+}
+
+message Version {
+  uint32 major = 532301620;
+  uint32 minor = 529508845;
+  uint32 revision = 97339090;
+  uint32 build = 232742718;
+}
+
+message WifiNetwork {
+  string ssid = 104436;
+  string uuid = 478588368;
+  metarpc.WifiSecurity security = 319164643;
+  uint32 signal = 193871323;
+}
+
+message DisplayResolution {
+  uint32 hactive = 121823780;
+  uint32 vactive = 115525609;
+  bool isProgressive = 390063747;
+  float refreshRate = 310619920;
+  bool isSupported = 151846029;
+}
+
+message StructureGridPoint {
+  uint32 x = 492162144;
+  uint32 y = 129745258;
+  metarpc.IntPoint vertex = 494633752;
+  metarpc.IntPoint left = 164156232;
+  metarpc.IntPoint right = 516690724;
+  metarpc.IntPoint up = 383208454;
+  metarpc.IntPoint down = 28365398;
+}
+
+message StructureGridPointAdjustment {
+  metarpc.StructureGridPointUpdateType type = 81981970;
+  metarpc.IntPoint point = 462841134;
+}
+
+message StructureGridPointUpdate {
+  uint32 x = 492162144;
+  uint32 y = 129745258;
+  repeated metarpc.StructureGridPointAdjustment adjustments = 129663740;
+}
+
+message Structure {
+  uint32 width = 258394657;
+  uint32 height = 81420484;
+  uint32 precision = 471414098;
+  repeated metarpc.StructureGridPoint gridPoints = 258120677;
+}
+
+message TestConnectionRequestMessage {
+}
+
+message TestConnectionReplyMessage {
+}
+
+message SubscribeRequestMessage {
+  uint32 dataFlags = 85607788;
+}
+
+message SubscribeReplyMessage {
+}
+
+message UnsubscribeRequestMessage {
+  uint32 dataFlags = 85607788;
+}
+
+message UnsubscribeReplyMessage {
+}
+
+message ShowTestcardRequestMessage {
+  metarpc.TestcardMode mode = 410846565;
+}
+
+message ShowTestcardReplyMessage {
+}
+
+message HideTestcardRequestMessage {
+}
+
+message HideTestcardReplyMessage {
+}
+
+message SetResolutionRequestMessage {
+  string id = 433005631;
+}
+
+message SetResolutionReplyMessage {
+}
+
+message PlayRequestMessage {
+}
+
+message PlayReplyMessage {
+}
+
+message PauseRequestMessage {
+}
+
+message PauseReplyMessage {
+}
+
+message StopRequestMessage {
+}
+
+message StopReplyMessage {
+}
+
+message SetGlobalBrightnessRequestMessage {
+  float brightness = 358630285;
+}
+
+message SetGlobalBrightnessReplyMessage {
+}
+
+message SetGlobalVolumeRequestMessage {
+  float volume = 36467202;
+}
+
+message SetGlobalVolumeReplyMessage {
+  metarpc.Response result = 1;
+}
+
+message SetSlideIndexRequestMessage {
+  uint32 index = 275949124;
+}
+
+message SetSlideIndexReplyMessage {
+}
+
+message SetSlideByNameRequestMessage {
+  string name = 304490340;
+}
+
+message SetSlideByNameReplyMessage {
+}
+
+message NextSlideRequestMessage {
+}
+
+message NextSlideReplyMessage {
+}
+
+message PrevSlideRequestMessage {
+}
+
+message PrevSlideReplyMessage {
+}
+
+message SetParameterValueRequestMessage {
+  string name = 304490340;
+  string slideName = 6087929;
+  string value = 151951315;
+  string type = 81981970;
+}
+
+message SetParameterValueReplyMessage {
+}
+
+message SetParameterValueByOSCAddressRequestMessage {
+  string address = 278603454;
+  string value = 151951315;
+  string type = 81981970;
+}
+
+message SetParameterValueByOSCAddressReplyMessage {
+}
+
+message ModifyParameterOSCMappingRequestMessage {
+  metarpc.OSCAddressChangeType type = 81981970;
+  string name = 304490340;
+  string slideName = 6087929;
+  string oscAddress = 60479808;
+}
+
+message ModifyParameterOSCMappingReplyMessage {
+}
+
+message LearnOSCParameterRequestMessage {
+  string name = 304490340;
+  string slideName = 6087929;
+}
+
+message LearnOSCParameterReplyMessage {
+}
+
+message SetAudioReactivityEnabledRequestMessage {
+  bool enabled = 522274146;
+}
+
+message SetAudioReactivityEnabledReplyMessage {
+}
+
+message SetAudioReactivitySettingsRequestMessage {
+  metarpc.AudioReactivitySettings settings = 351877428;
+}
+
+message SetAudioReactivitySettingsReplyMessage {
+}
+
+message SetAudioReactivityCalibrationEnabledRequestMessage {
+  bool enabled = 522274146;
+}
+
+message SetAudioReactivityCalibrationEnabledReplyMessage {
+}
+
+message SetAudioReactivityOverlayEnabledRequestMessage {
+  bool enabled = 522274146;
+}
+
+message SetAudioReactivityOverlayEnabledReplyMessage {
+}
+
+message ResetStructureRequestMessage {
+}
+
+message ResetStructureReplyMessage {
+}
+
+message EnableStructureRequestMessage {
+}
+
+message EnableStructureReplyMessage {
+}
+
+message DisableStructureRequestMessage {
+}
+
+message DisableStructureReplyMessage {
+}
+
+message EnableStructureGridUIRequestMessage {
+}
+
+message EnableStructureGridUIReplyMessage {
+}
+
+message DisableStructureGridUIRequestMessage {
+}
+
+message DisableStructureGridUIReplyMessage {
+}
+
+message EnableStructureTessellationUIRequestMessage {
+}
+
+message EnableStructureTessellationUIReplyMessage {
+}
+
+message DisableStructureTessellationUIRequestMessage {
+}
+
+message DisableStructureTessellationUIReplyMessage {
+}
+
+message UpdateRendererStructureRequestMessage {
+  repeated metarpc.StructureGridPointUpdate updates = 440978235;
+}
+
+message UpdateRendererStructureReplyMessage {
+}
+
+message SetRendererStructureRequestMessage {
+  metarpc.Structure structure = 302108821;
+}
+
+message SetRendererStructureReplyMessage {
+}
+
+message SetObjectCoordinatesRequestMessage {
+  repeated metarpc.IntPoint vertices = 534683186;
+  repeated metarpc.IntPoint texCoords = 403338142;
+}
+
+message SetObjectCoordinatesReplyMessage {
+  metarpc.Response result = 1;
+}
+
+message RebootRequestMessage {
+}
+
+message RebootReplyMessage {
+}
+
+message ResetUserDataRequestMessage {
+}
+
+message ResetUserDataReplyMessage {
+}
+
+message TurnProjectorOnRequestMessage {
+}
+
+message TurnProjectorOnReplyMessage {
+}
+
+message TurnProjectorOffRequestMessage {
+}
+
+message TurnProjectorOffReplyMessage {
+}
+
+message AdjustProjectorFocusRequestMessage {
+  bool increase = 446564298;
+}
+
+message AdjustProjectorFocusReplyMessage {
+}
+
+message AdjustProjectorFocusFineRequestMessage {
+  int32 delta = 339217013;
+}
+
+message AdjustProjectorFocusFineReplyMessage {
+}
+
+message SetProjectionModeRequestMessage {
+  metarpc.ProjectionMode projectionMode = 165148626;
+}
+
+message SetProjectionModeReplyMessage {
+}
+
+message ResetKeystoneRequestMessage {
+}
+
+message ResetKeystoneReplyMessage {
+}
+
+message SetKeystoneAnglesRequestMessage {
+  int32 degreesLeftToRight = 154110226;
+  int32 degreesTopToBottom = 478902999;
+}
+
+message SetKeystoneAnglesReplyMessage {
+}
+
+message SetKeystoneCornersRequestMessage {
+  metarpc.KeystoneCorners corners = 270402648;
+}
+
+message SetKeystoneCornersReplyMessage {
+}
+
+message SetLocationRequestMessage {
+  string location = 302789407;
+}
+
+message SetLocationReplyMessage {
+}
+
+message PeekOnRequestMessage {
+}
+
+message PeekOnReplyMessage {
+}
+
+message PeekOffRequestMessage {
+}
+
+message PeekOffReplyMessage {
+}
+
+message SetPeekExposureRequestMessage {
+  int32 exposure = 209734112;
+}
+
+message SetPeekExposureReplyMessage {
+}
+
+message SetPeekWhiteBalanceRequestMessage {
+  int32 whiteBalance = 263810886;
+}
+
+message SetPeekWhiteBalanceReplyMessage {
+}
+
+message UpdateFirmwareRequestMessage {
+}
+
+message UpdateFirmwareReplyMessage {
+}
+
+message SetUpdateTypeRequestMessage {
+  string type = 81981970;
+}
+
+message SetUpdateTypeReplyMessage {
+}
+
+message CheckForFirmwareUpdatesRequestMessage {
+}
+
+message CheckForFirmwareUpdatesReplyMessage {
+}
+
+message ConnectToNetworkRequestMessage {
+  string ssid = 104436;
+  metarpc.WifiSecurity security = 319164643;
+  string psk = 237823952;
+}
+
+message ConnectToNetworkReplyMessage {
+}
+
+message RemoveNetworkRequestMessage {
+  string ssid = 104436;
+}
+
+message RemoveNetworkReplyMessage {
+}
+
+message ForceIntoPairingModeRequestMessage {
+}
+
+message ForceIntoPairingModeReplyMessage {
+}
+
+message StartScanRequestMessage {
+  metarpc.StartScanSettings settings = 351877428;
+}
+
+message StartScanReplyMessage {
+}
+
+message CancelScanRequestMessage {
+}
+
+message CancelScanReplyMessage {
+}
+
+message LivelightOnRequestMessage {
+  int32 framebufferWidth = 198804592;
+  int32 framebufferHeight = 88321104;
+}
+
+message LivelightOnReplyMessage {
+}
+
+message LivelightOffRequestMessage {
+}
+
+message LivelightOffReplyMessage {
+}
+
+message LivelightSetCursorPropertiesRequestMessage {
+  float strokeWidth = 527409854;
+  metarpc.UIntColor strokeColor = 208253494;
+}
+
+message LivelightSetCursorPropertiesReplyMessage {
+}
+
+message LivelightSetCursorPositionRequestMessage {
+  float x = 492162144;
+  float y = 129745258;
+}
+
+message LivelightVectorSceneFullUpdateRequestMessage {
+  metarpc.VectorScene scene = 17168529;
+}
+
+message LivelightVectorSceneFullUpdateReplyMessage {
+}
+
+message LivelightSetNdiSourceRequestMessage {
+  string sourceName = 58332626;
+}
+
+message LivelightSetNdiSourceReplyMessage {
+}
+
+message LivelightClearNdiSourceRequestMessage {
+}
+
+message LivelightClearNdiSourceReplyMessage {
+}
+
+message OaklightOnRequestMessage {
+  metarpc.OaklightMode mode = 410846565;
+}
+
+message OaklightOnReplyMessage {
+  metarpc.Response result = 1;
+}
+
+message OaklightOffRequestMessage {
+}
+
+message OaklightOffReplyMessage {
+}
+
+message OaklightSetObjectRequestMessage {
+  string projectId = 89510405;
+}
+
+message OaklightSetObjectReplyMessage {
+  metarpc.Response result = 1;
+}
+
+message OaklightSetCustomObjectRequestMessage {
+}
+
+message OaklightSetCustomObjectReplyMessage {
+  metarpc.Response result = 1;
+}
+
+message RemoveAllCustomObjectFilesRequestMessage {
+}
+
+message RemoveAllCustomObjectFilesReplyMessage {
+}
+
+message HdmiStartRequestMessage {
+  uint32 id = 433005631;
+}
+
+message HdmiStartReplyMessage {
+}
+
+message HdmiStopRequestMessage {
+}
+
+message HdmiStopReplyMessage {
+}
+
+message GetHdmiGeometryCorrectionRequestMessage {
+}
+
+message GetHdmiGeometryCorrectionReplyMessage {
+  metarpc.GeometryCorrection result = 1;
+}
+
+message SetHdmiGeometryCorrectionRequestMessage {
+  metarpc.GeometryCorrection correction = 428289492;
+}
+
+message SetHdmiGeometryCorrectionReplyMessage {
+}
+
+message DisplayStateChangedRequestMessage {
+  metarpc.HDMICableState cableStatus = 52503789;
+  metarpc.DisplayResolution resolution = 222282819;
+  repeated metarpc.DisplayResolution availableResolutions = 71357510;
+  metarpc.CameraModel cameraModel = 431385634;
+  string cameraFirmwareVersion = 56358483;
+  bool lightEngineOn = 281165199;
+}
+
+message NetworkStateChangedRequestMessage {
+  string hostname = 49086333;
+  metarpc.ConnectionType connectionType = 83386923;
+  metarpc.ConnectionMode connectionMode = 158524990;
+  string activeWifiSSID = 85856123;
+  repeated metarpc.WifiNetwork knownWifiNetworks = 104346649;
+  repeated metarpc.WifiNetwork availableWifiNetworks = 254775361;
+}
+
+message DeviceStateChangedRequestMessage {
+  metarpc.TestcardStatus testcardStatus = 204728611;
+  metarpc.LEDColor ledColor = 302922940;
+  metarpc.ProjectionMode projectionMode = 165148626;
+}
+
+message FirmwareStateChangedRequestMessage {
+  string currentVersion = 158276489;
+  string availableVersion = 203355872;
+  string updateType = 133719312;
+}
+
+message OtaStateChangedRequestMessage {
+  metarpc.OTAStatus status1 = 135275865;
+  float overallPercentComplete = 118216209;
+  uint64 stepByteSize = 228727163;
+  uint64 stepBytesTransferred = 290232655;
+  float stepByteRate = 175290004;
+  float stepPercentComplete = 92787390;
+  float stepElapsedTime = 114321507;
+  string errorMessage = 408181555;
+}
+
+message DeviceConfigChangedRequestMessage {
+  string serialNumber = 319884543;
+  string name = 304490340;
+  string partNumber = 245127671;
+  string manufactured = 372486364;
+  string location = 302789407;
+}
+
+message PlaybackStateChangedRequestMessage {
+  metarpc.PlaybackStatus status = 456777171;
+  uint32 slide = 37415115;
+  metarpc.ProjectMetadata projectMetadata = 302127019;
+  repeated metarpc.ProjectMetadata projectMetadataList = 457450027;
+  float globalBrightness = 392856098;
+  float globalVolume = 139320536;
+  repeated metarpc.IntPoint objectCoordinates = 415384392;
+}
+
+message PlaybackParametersChangedRequestMessage {
+  metarpc.PlaybackParameters parameters = 325586613;
+}
+
+message AudioReactivitySettingsChangedRequestMessage {
+  bool enabled = 522274146;
+  metarpc.AudioReactivitySettings settings = 351877428;
+  bool overlayEnabled = 335680050;
+  repeated string gainEffectNames = 272976899;
+  repeated string accumulationEffectNames = 212745742;
+}
+
+message RendererSettingsChangedRequestMessage {
+  bool structureEnabled = 436674469;
+  bool finetuneEnabled = 40371392;
+  bool colorCorrectionEnabled = 508828382;
+  bool structureUIEnabled = 395254163;
+  bool tessellationUIEnabled = 82686806;
+}
+
+message RendererStructureFullUpdateRequestMessage {
+  metarpc.Structure structure = 302108821;
+}
+
+message ScanStateChangedRequestMessage {
+  metarpc.ScanState state = 315331871;
+  metarpc.ErrorType error = 111540978;
+  float percentComplete = 168593007;
+  string errorMessage = 408181555;
+}
+
+message LivelightStateChangedRequestMessage {
+  bool isEnabled = 116064705;
+  repeated string ndiSourceList = 148452625;
+  string currentNdiSource = 60253387;
+}
+
+message MetaRPCServerRequestMessage {
+  oneof data {
+    metarpc.TestConnectionRequestMessage testConnectionRequest = 382276520;
+    metarpc.SubscribeRequestMessage subscribeRequest = 295530737;
+    metarpc.UnsubscribeRequestMessage unsubscribeRequest = 321962054;
+    metarpc.ShowTestcardRequestMessage showTestcardRequest = 33793215;
+    metarpc.HideTestcardRequestMessage hideTestcardRequest = 149309007;
+    metarpc.SetResolutionRequestMessage setResolutionRequest = 467961494;
+    metarpc.PlayRequestMessage playRequest = 424021114;
+    metarpc.PauseRequestMessage pauseRequest = 186826622;
+    metarpc.StopRequestMessage stopRequest = 25286167;
+    metarpc.SetGlobalBrightnessRequestMessage setGlobalBrightnessRequest = 126547907;
+    metarpc.SetGlobalVolumeRequestMessage setGlobalVolumeRequest = 347995607;
+    metarpc.SetSlideIndexRequestMessage setSlideIndexRequest = 256822738;
+    metarpc.SetSlideByNameRequestMessage setSlideByNameRequest = 267981667;
+    metarpc.NextSlideRequestMessage nextSlideRequest = 398781769;
+    metarpc.PrevSlideRequestMessage prevSlideRequest = 451597334;
+    metarpc.SetParameterValueRequestMessage setParameterValueRequest = 265178883;
+    metarpc.SetParameterValueByOSCAddressRequestMessage setParameterValueByOSCAddressRequest = 446903721;
+    metarpc.ModifyParameterOSCMappingRequestMessage modifyParameterOSCMappingRequest = 7137543;
+    metarpc.LearnOSCParameterRequestMessage learnOSCParameterRequest = 189579342;
+    metarpc.SetAudioReactivityEnabledRequestMessage setAudioReactivityEnabledRequest = 534288463;
+    metarpc.SetAudioReactivitySettingsRequestMessage setAudioReactivitySettingsRequest = 361390581;
+    metarpc.SetAudioReactivityCalibrationEnabledRequestMessage setAudioReactivityCalibrationEnabledRequest = 360065049;
+    metarpc.SetAudioReactivityOverlayEnabledRequestMessage setAudioReactivityOverlayEnabledRequest = 479515871;
+    metarpc.ResetStructureRequestMessage resetStructureRequest = 413617924;
+    metarpc.EnableStructureRequestMessage enableStructureRequest = 79128809;
+    metarpc.DisableStructureRequestMessage disableStructureRequest = 100011081;
+    metarpc.EnableStructureGridUIRequestMessage enableStructureGridUIRequest = 304377617;
+    metarpc.DisableStructureGridUIRequestMessage disableStructureGridUIRequest = 374515456;
+    metarpc.EnableStructureTessellationUIRequestMessage enableStructureTessellationUIRequest = 253890391;
+    metarpc.DisableStructureTessellationUIRequestMessage disableStructureTessellationUIRequest = 351500024;
+    metarpc.UpdateRendererStructureRequestMessage updateRendererStructureRequest = 427191922;
+    metarpc.SetRendererStructureRequestMessage setRendererStructureRequest = 38837241;
+    metarpc.SetObjectCoordinatesRequestMessage setObjectCoordinatesRequest = 510397136;
+    metarpc.RebootRequestMessage rebootRequest = 455847894;
+    metarpc.ResetUserDataRequestMessage resetUserDataRequest = 261894941;
+    metarpc.TurnProjectorOnRequestMessage turnProjectorOnRequest = 48761343;
+    metarpc.TurnProjectorOffRequestMessage turnProjectorOffRequest = 141803418;
+    metarpc.AdjustProjectorFocusRequestMessage adjustProjectorFocusRequest = 512149153;
+    metarpc.AdjustProjectorFocusFineRequestMessage adjustProjectorFocusFineRequest = 233039946;
+    metarpc.SetProjectionModeRequestMessage setProjectionModeRequest = 320022869;
+    metarpc.ResetKeystoneRequestMessage resetKeystoneRequest = 192769936;
+    metarpc.SetKeystoneAnglesRequestMessage setKeystoneAnglesRequest = 381505684;
+    metarpc.SetKeystoneCornersRequestMessage setKeystoneCornersRequest = 266474539;
+    metarpc.SetLocationRequestMessage setLocationRequest = 187189743;
+    metarpc.PeekOnRequestMessage peekOnRequest = 108299298;
+    metarpc.PeekOffRequestMessage peekOffRequest = 188876651;
+    metarpc.SetPeekExposureRequestMessage setPeekExposureRequest = 143043695;
+    metarpc.SetPeekWhiteBalanceRequestMessage setPeekWhiteBalanceRequest = 465899310;
+    metarpc.UpdateFirmwareRequestMessage updateFirmwareRequest = 13882792;
+    metarpc.SetUpdateTypeRequestMessage setUpdateTypeRequest = 15712343;
+    metarpc.CheckForFirmwareUpdatesRequestMessage checkForFirmwareUpdatesRequest = 280756249;
+    metarpc.ConnectToNetworkRequestMessage connectToNetworkRequest = 534191656;
+    metarpc.RemoveNetworkRequestMessage removeNetworkRequest = 185360178;
+    metarpc.ForceIntoPairingModeRequestMessage forceIntoPairingModeRequest = 419592428;
+    metarpc.StartScanRequestMessage startScanRequest = 533485912;
+    metarpc.CancelScanRequestMessage cancelScanRequest = 56735702;
+    metarpc.LivelightOnRequestMessage livelightOnRequest = 409864263;
+    metarpc.LivelightOffRequestMessage livelightOffRequest = 18573641;
+    metarpc.LivelightSetCursorPropertiesRequestMessage livelightSetCursorPropertiesRequest = 408846697;
+    metarpc.LivelightSetCursorPositionRequestMessage livelightSetCursorPositionRequest = 464213299;
+    metarpc.LivelightVectorSceneFullUpdateRequestMessage livelightVectorSceneFullUpdateRequest = 269279183;
+    metarpc.LivelightSetNdiSourceRequestMessage livelightSetNdiSourceRequest = 532383756;
+    metarpc.LivelightClearNdiSourceRequestMessage livelightClearNdiSourceRequest = 519524998;
+    metarpc.OaklightOnRequestMessage oaklightOnRequest = 248821778;
+    metarpc.OaklightOffRequestMessage oaklightOffRequest = 479577080;
+    metarpc.OaklightSetObjectRequestMessage oaklightSetObjectRequest = 409686374;
+    metarpc.OaklightSetCustomObjectRequestMessage oaklightSetCustomObjectRequest = 122669395;
+    metarpc.RemoveAllCustomObjectFilesRequestMessage removeAllCustomObjectFilesRequest = 31728679;
+    metarpc.HdmiStartRequestMessage hdmiStartRequest = 332332679;
+    metarpc.HdmiStopRequestMessage hdmiStopRequest = 23373288;
+    metarpc.GetHdmiGeometryCorrectionRequestMessage getHdmiGeometryCorrectionRequest = 334697270;
+    metarpc.SetHdmiGeometryCorrectionRequestMessage setHdmiGeometryCorrectionRequest = 348183778;
+  }
+}
+
+message MetaRPCServerReplyMessage {
+  oneof data {
+    metarpc.TestConnectionReplyMessage testConnectionReply = 382276520;
+    metarpc.SubscribeReplyMessage subscribeReply = 295530737;
+    metarpc.UnsubscribeReplyMessage unsubscribeReply = 321962054;
+    metarpc.ShowTestcardReplyMessage showTestcardReply = 33793215;
+    metarpc.HideTestcardReplyMessage hideTestcardReply = 149309007;
+    metarpc.SetResolutionReplyMessage setResolutionReply = 467961494;
+    metarpc.PlayReplyMessage playReply = 424021114;
+    metarpc.PauseReplyMessage pauseReply = 186826622;
+    metarpc.StopReplyMessage stopReply = 25286167;
+    metarpc.SetGlobalBrightnessReplyMessage setGlobalBrightnessReply = 126547907;
+    metarpc.SetGlobalVolumeReplyMessage setGlobalVolumeReply = 347995607;
+    metarpc.SetSlideIndexReplyMessage setSlideIndexReply = 256822738;
+    metarpc.SetSlideByNameReplyMessage setSlideByNameReply = 267981667;
+    metarpc.NextSlideReplyMessage nextSlideReply = 398781769;
+    metarpc.PrevSlideReplyMessage prevSlideReply = 451597334;
+    metarpc.SetParameterValueReplyMessage setParameterValueReply = 265178883;
+    metarpc.SetParameterValueByOSCAddressReplyMessage setParameterValueByOSCAddressReply = 446903721;
+    metarpc.ModifyParameterOSCMappingReplyMessage modifyParameterOSCMappingReply = 7137543;
+    metarpc.LearnOSCParameterReplyMessage learnOSCParameterReply = 189579342;
+    metarpc.SetAudioReactivityEnabledReplyMessage setAudioReactivityEnabledReply = 534288463;
+    metarpc.SetAudioReactivitySettingsReplyMessage setAudioReactivitySettingsReply = 361390581;
+    metarpc.SetAudioReactivityCalibrationEnabledReplyMessage setAudioReactivityCalibrationEnabledReply = 360065049;
+    metarpc.SetAudioReactivityOverlayEnabledReplyMessage setAudioReactivityOverlayEnabledReply = 479515871;
+    metarpc.ResetStructureReplyMessage resetStructureReply = 413617924;
+    metarpc.EnableStructureReplyMessage enableStructureReply = 79128809;
+    metarpc.DisableStructureReplyMessage disableStructureReply = 100011081;
+    metarpc.EnableStructureGridUIReplyMessage enableStructureGridUIReply = 304377617;
+    metarpc.DisableStructureGridUIReplyMessage disableStructureGridUIReply = 374515456;
+    metarpc.EnableStructureTessellationUIReplyMessage enableStructureTessellationUIReply = 253890391;
+    metarpc.DisableStructureTessellationUIReplyMessage disableStructureTessellationUIReply = 351500024;
+    metarpc.UpdateRendererStructureReplyMessage updateRendererStructureReply = 427191922;
+    metarpc.SetRendererStructureReplyMessage setRendererStructureReply = 38837241;
+    metarpc.SetObjectCoordinatesReplyMessage setObjectCoordinatesReply = 510397136;
+    metarpc.RebootReplyMessage rebootReply = 455847894;
+    metarpc.ResetUserDataReplyMessage resetUserDataReply = 261894941;
+    metarpc.TurnProjectorOnReplyMessage turnProjectorOnReply = 48761343;
+    metarpc.TurnProjectorOffReplyMessage turnProjectorOffReply = 141803418;
+    metarpc.AdjustProjectorFocusReplyMessage adjustProjectorFocusReply = 512149153;
+    metarpc.AdjustProjectorFocusFineReplyMessage adjustProjectorFocusFineReply = 233039946;
+    metarpc.SetProjectionModeReplyMessage setProjectionModeReply = 320022869;
+    metarpc.ResetKeystoneReplyMessage resetKeystoneReply = 192769936;
+    metarpc.SetKeystoneAnglesReplyMessage setKeystoneAnglesReply = 381505684;
+    metarpc.SetKeystoneCornersReplyMessage setKeystoneCornersReply = 266474539;
+    metarpc.SetLocationReplyMessage setLocationReply = 187189743;
+    metarpc.PeekOnReplyMessage peekOnReply = 108299298;
+    metarpc.PeekOffReplyMessage peekOffReply = 188876651;
+    metarpc.SetPeekExposureReplyMessage setPeekExposureReply = 143043695;
+    metarpc.SetPeekWhiteBalanceReplyMessage setPeekWhiteBalanceReply = 465899310;
+    metarpc.UpdateFirmwareReplyMessage updateFirmwareReply = 13882792;
+    metarpc.SetUpdateTypeReplyMessage setUpdateTypeReply = 15712343;
+    metarpc.CheckForFirmwareUpdatesReplyMessage checkForFirmwareUpdatesReply = 280756249;
+    metarpc.ConnectToNetworkReplyMessage connectToNetworkReply = 534191656;
+    metarpc.RemoveNetworkReplyMessage removeNetworkReply = 185360178;
+    metarpc.ForceIntoPairingModeReplyMessage forceIntoPairingModeReply = 419592428;
+    metarpc.StartScanReplyMessage startScanReply = 533485912;
+    metarpc.CancelScanReplyMessage cancelScanReply = 56735702;
+    metarpc.LivelightOnReplyMessage livelightOnReply = 409864263;
+    metarpc.LivelightOffReplyMessage livelightOffReply = 18573641;
+    metarpc.LivelightSetCursorPropertiesReplyMessage livelightSetCursorPropertiesReply = 408846697;
+    metarpc.LivelightVectorSceneFullUpdateReplyMessage livelightVectorSceneFullUpdateReply = 269279183;
+    metarpc.LivelightSetNdiSourceReplyMessage livelightSetNdiSourceReply = 532383756;
+    metarpc.LivelightClearNdiSourceReplyMessage livelightClearNdiSourceReply = 519524998;
+    metarpc.OaklightOnReplyMessage oaklightOnReply = 248821778;
+    metarpc.OaklightOffReplyMessage oaklightOffReply = 479577080;
+    metarpc.OaklightSetObjectReplyMessage oaklightSetObjectReply = 409686374;
+    metarpc.OaklightSetCustomObjectReplyMessage oaklightSetCustomObjectReply = 122669395;
+    metarpc.RemoveAllCustomObjectFilesReplyMessage removeAllCustomObjectFilesReply = 31728679;
+    metarpc.HdmiStartReplyMessage hdmiStartReply = 332332679;
+    metarpc.HdmiStopReplyMessage hdmiStopReply = 23373288;
+    metarpc.GetHdmiGeometryCorrectionReplyMessage getHdmiGeometryCorrectionReply = 334697270;
+    metarpc.SetHdmiGeometryCorrectionReplyMessage setHdmiGeometryCorrectionReply = 348183778;
+  }
+}
+
+message MetaRPCClientRequestMessage {
+  oneof data {
+    metarpc.DisplayStateChangedRequestMessage displayStateChangedRequest = 420013897;
+    metarpc.NetworkStateChangedRequestMessage networkStateChangedRequest = 457034471;
+    metarpc.DeviceStateChangedRequestMessage deviceStateChangedRequest = 194193270;
+    metarpc.FirmwareStateChangedRequestMessage firmwareStateChangedRequest = 495631220;
+    metarpc.OtaStateChangedRequestMessage otaStateChangedRequest = 8546062;
+    metarpc.DeviceConfigChangedRequestMessage deviceConfigChangedRequest = 255525335;
+    metarpc.PlaybackStateChangedRequestMessage playbackStateChangedRequest = 384320591;
+    metarpc.PlaybackParametersChangedRequestMessage playbackParametersChangedRequest = 93751768;
+    metarpc.AudioReactivitySettingsChangedRequestMessage audioReactivitySettingsChangedRequest = 342718848;
+    metarpc.RendererSettingsChangedRequestMessage rendererSettingsChangedRequest = 28738308;
+    metarpc.RendererStructureFullUpdateRequestMessage rendererStructureFullUpdateRequest = 232435496;
+    metarpc.ScanStateChangedRequestMessage scanStateChangedRequest = 136734450;
+    metarpc.LivelightStateChangedRequestMessage livelightStateChangedRequest = 102795921;
+  }
+}
+
+message MetaRPCClientReplyMessage {
+}
+
+message MetaRPCMessage {
+  uint32 messageId = 1;
+  oneof data {
+    metarpc.MetaRPCServerRequestMessage serverRequest = 2;
+    metarpc.MetaRPCServerReplyMessage serverReply = 3;
+    metarpc.MetaRPCClientRequestMessage clientRequest = 4;
+    metarpc.MetaRPCClientReplyMessage clientReply = 5;
+  }
+}
+
+service MetaRPC {
+  rpc Talk(stream metarpc.MetaRPCMessage) returns (stream metarpc.MetaRPCMessage);
+}

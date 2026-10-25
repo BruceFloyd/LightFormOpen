@@ -66,6 +66,7 @@ enum GeometryCorrectionMode {
 }
 
 enum DataFlag {
+  option allow_alias = true;
   DATAFLAG_UNKNOWN = 0;
   DATAFLAG_DISPLAY_STATE = 1;
   DATAFLAG_NETWORK_STATE = 2;
