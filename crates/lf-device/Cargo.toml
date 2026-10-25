@@ -1,0 +1,9 @@
+[package]
+name = "lf-device"
+description = "Discovery and control of Lightform LF1/LF2 projectors over the local network"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]

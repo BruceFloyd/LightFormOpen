@@ -1,0 +1,15 @@
+[package]
+name = "lf-cli"
+description = "Command-line driver for LightFormOpen"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "lf"
+path = "src/main.rs"
+
+[dependencies]
+lf-lit = { path = "../../crates/lf-lit" }
+lf-device = { path = "../../crates/lf-device" }

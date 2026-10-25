@@ -1,0 +1,1698 @@
+{
+ "00076275-62ae-4dc8-9c01-d26ce74ee230": {
+  "display": "retiredShaderProperties",
+  "type": "lightform.object.effect"
+ },
+ "01e60f1b-f543-4789-8b31-6b0be9634573": {
+  "display": "Get Structure Flag",
+  "type": "lightform.enum.get-structure-flag"
+ },
+ "020466ef-557d-45d9-807e-ad39d740bcc7": {
+  "display": "Lightform_Int64ValueControllerInterface",
+  "type": "lightform.interface.int64-value-controller"
+ },
+ "025ecd4f-03ff-4ced-84dc-3c1ee2f23bd6": {
+  "display": "Input Mode Activation Reason",
+  "type": "lightform.enum.input-mode-activation-reason"
+ },
+ "03a02c80-58f5-400f-85cd-5ee3ad3048a9": {
+  "display": "File Find Flag",
+  "type": "lightform.enum.file-find-flag"
+ },
+ "06e3d1f6-1098-4866-9115-f750da044663": {
+  "display": "Time Duration Unit",
+  "type": "lightform.enum.time-duration-unit"
+ },
+ "08a29411-b548-4c84-87eb-e9c1d8cda34b": {
+  "display": "File System Path Value Controller",
+  "type": "lightform.object.value-controller.file-system-path"
+ },
+ "0963dc1e-30f0-4c91-a878-cace569c7fa2": {
+  "display": "RenderAPI",
+  "type": "lightform.enum.renderapi"
+ },
+ "09c19897-10df-43d5-8f0c-9a09fd803a4b": {
+  "display": "AnyObject Manager Serializer Read Result Code",
+  "type": "lightform.enum.anyobject-manager-serializer-read-result-code"
+ },
+ "0a343c92-b8ef-4db8-919f-eb8381eef51b": {
+  "display": "AnyObject Transient Status",
+  "type": "lightform.enum.anyobject-transient-status"
+ },
+ "0a387072-4116-4874-9529-21cfeca48841": {
+  "display": "AnyObject Reference Message Type",
+  "type": "lightform.enum.anyobject-reference-message-type"
+ },
+ "0b65f884-23a3-44ca-8203-0101f70095fe": {
+  "display": "Background Display Mode",
+  "type": "lightform.enum.background-display-mode"
+ },
+ "0c55fda4-24da-4764-80f1-ddca625f9e4b": {
+  "display": "Object Reference Value Controller",
+  "type": "lightform.object.value-controller.object-reference"
+ },
+ "0cfe733d-95ad-4b55-92ee-f42781be341a": {
+  "display": "Auxiliary Effect Image Type",
+  "type": "lightform.enum.auxiliary-effect-image-type"
+ },
+ "0dcb7655-68ff-4f5d-86ca-634532c7b20a": {
+  "display": "QtCanvasInterface",
+  "type": "lightform.interface.qt-canvas"
+ },
+ "0ddb4383-fc2e-46d1-bdd3-e34c940fabfd": {
+  "display": "Lightform_Vector3IValueControllerInterface",
+  "type": "lightform.interface.vector3i-value-controller"
+ },
+ "0de1701b-e606-4e65-b473-68d4521467d7": {
+  "display": "Video Loop Behavior",
+  "type": "lightform.enum.video-loop-behavior"
+ },
+ "0de3f0d9-0ee1-4b86-8df7-45b6cd53ef26": {
+  "display": "QtContelInterface",
+  "type": "lightform.interface.qt-contel"
+ },
+ "111cb738-1551-4ddd-a45a-1939112298fb": {
+  "display": "Watch File Result",
+  "type": "lightform.enum.watch-file-result"
+ },
+ "114c7f42-ced1-4db2-8c31-2cc14ef727d6": {
+  "display": "Type",
+  "type": "lightform.enum.directory-operation-error.type"
+ },
+ "11eb430c-2d25-4c23-9d85-e6a6ed9d6944": {
+  "display": "Asset Pixel Format",
+  "type": "lightform.enum.asset-pixel-format"
+ },
+ "12599082-ead1-49dc-873f-f9eaa575b60a": {
+  "display": "Plain UUID Value Controller",
+  "type": "lightform.object.value-controller.plain-uuid"
+ },
+ "12b297fc-8216-4381-9e14-4612556f5fbb": {
+  "display": "QtPropertyTreeModelInterface",
+  "type": "lightform.interface.qt-property-tree-model"
+ },
+ "12bb088a-698a-4ffe-af5e-d580aade49df": {
+  "display": "Lightform_EditablePointsInterface",
+  "type": "lightform.interface.editable-points"
+ },
+ "12c0e167-bee0-4180-84e3-099dc3953bf7": {
+  "display": "Directory Operations Flag",
+  "type": "lightform.enum.directory-operations-flag"
+ },
+ "13635d0f-eb92-4cc3-90cf-af438ef26149": {
+  "display": "Plain Transform2 Value Controller",
+  "type": "lightform.object.value-controller.plain-transform2"
+ },
+ "163603b3-6a51-4709-b541-29f0beafea1f": {
+  "display": "Copy To File Result",
+  "type": "lightform.enum.file-system-path.copy-to-file-result"
+ },
+ "181b60d4-d320-45bf-a635-fb550676fb31": {
+  "display": "QtProjectAssetsTabInterface",
+  "type": "lightform.interface.qt-project-assets-tab"
+ },
+ "1980e89e-a313-47ed-8696-ec6190058c8f": {
+  "display": "AnyObject Clone Flag",
+  "type": "lightform.enum.anyobject-clone-flag"
+ },
+ "19ba2fb4-b7b7-41bf-a51d-ebc6d2784a8f": {
+  "display": "Global Action",
+  "type": "lightform.enum.global-action"
+ },
+ "19c210d2-cdd1-4729-b099-5e7e019d07c6": {
+  "display": "Pickable Type",
+  "type": "lightform.enum.pickable-type"
+ },
+ "1ab12ad0-6be6-11ea-ab12-0800200c9a66": {
+  "display": "Application Stream Video Type",
+  "type": "lightform.enum.application-stream-video-type"
+ },
+ "1b18461d-99b3-4779-a9eb-2b56c7cb1a5f": {
+  "display": "Scribble Flag",
+  "type": "lightform.enum.scribble-flag"
+ },
+ "1b25eb51-6f18-40c2-b910-48b6fc8f49a9": {
+  "display": "Lightform_ContelInterface",
+  "type": "lightform.interface.contel"
+ },
+ "1badb45b-936b-4113-8d51-4789b949f416": {
+  "display": "Lightform_ActionManagerInterface",
+  "type": "lightform.interface.action-manager"
+ },
+ "1bcd4896-70e2-46cb-8085-e1a7f6e04537": {
+  "display": "Process Open Result",
+  "type": "lightform.enum.process-open-result"
+ },
+ "1bd3c1fd-6cd1-4299-8f3b-4db21ece4312": {
+  "display": "Lightform_ValidityInterface",
+  "type": "lightform.interface.validity"
+ },
+ "1c4ae938-c42b-4267-85df-890b4b381a66": {
+  "display": "Timeline Tick Flag",
+  "type": "lightform.enum.timeline-tick-flag"
+ },
+ "1c526982-77f9-4135-b03a-93818c70d02a": {
+  "display": "Application Build Type",
+  "type": "lightform.enum.application-build-type"
+ },
+ "1cf1bfea-8391-4c60-b116-01189c179c20": {
+  "display": "Angle Value Controller",
+  "type": "lightform.object.value-controller.angle"
+ },
+ "1dcc37bc-13fc-4a36-8f38-7beb22d9246c": {
+  "display": "AnyObject Remove Object Result",
+  "type": "lightform.enum.anyobject-remove-object-result"
+ },
+ "200ce870-459e-4e1d-babb-0991b6314777": {
+  "display": "Lightform_AngleValueControllerInterface",
+  "type": "lightform.interface.angle-value-controller"
+ },
+ "2011a96d-382e-4ca0-92f5-b9b848d7f342": {
+  "display": "Render Graph Variable Type",
+  "type": "lightform.enum.render-graph-variable-type"
+ },
+ "21f6b6e0-a374-4d13-a7cd-3109150d2946": {
+  "display": "Int32 Value Controller",
+  "type": "lightform.object.value-controller.int32"
+ },
+ "221bb503-0394-4ece-a553-8587077aa223": {
+  "display": "Creator Edit Tool Action",
+  "type": "lightform.enum.creator-edit-tool-action"
+ },
+ "231277ee-1601-4b53-a89e-e1cc5a9451d1": {
+  "display": "Canvas Playback Mode",
+  "type": "lightform.enum.canvas-playback-mode"
+ },
+ "23a04f19-f40f-4798-b685-eb493b0d19b1": {
+  "display": "Unordered Collection",
+  "type": "lightform.object.unordered-collection"
+ },
+ "23ca45c2-cda6-48c0-b30a-5e725df47dd6": {
+  "display": "Time Out Of Bounds Behavior",
+  "type": "lightform.enum.time-out-of-bounds-behavior"
+ },
+ "23eb2a55-c800-44b6-9783-382e1d18fa3f": {
+  "display": "Lightform_ActionInterface",
+  "type": "lightform.interface.action"
+ },
+ "24215ed8-4a99-4b8d-ab18-49e1e8346187": {
+  "display": "QtValueControllerInterface",
+  "type": "lightform.interface.qt-value-controller"
+ },
+ "242d8362-33f1-4a55-9e3a-4500ce254fd0": {
+  "display": "Lightform_StructureInterface",
+  "type": "lightform.interface.structure"
+ },
+ "24374ee1-246b-450a-80a4-85feac28236d": {
+  "display": "Render Resource Status",
+  "type": "lightform.enum.render-resource-status"
+ },
+ "24ce3560-c02d-46ae-bc1d-ec0b72cab681": {
+  "display": "Vector4I Value Controller",
+  "type": "lightform.object.value-controller.vector4i"
+ },
+ "25637935-ecde-412d-8470-3b9229a60893": {
+  "display": "Application Settings",
+  "type": "lightform.object.application-settings"
+ },
+ "2588eeda-7bee-4a48-9191-c020cfd9015a": {
+  "display": "Lightform_BlendableInterface",
+  "type": "lightform.interface.blendable"
+ },
+ "259a74a1-b4c5-4ae5-b80a-93f981fafe3c": {
+  "display": "Format",
+  "type": "lightform.enum.log-listener.format"
+ },
+ "2647ff80-6cc2-11eb-8572-0800200c9a66": {
+  "display": "Project Type",
+  "type": "lightform.enum.project-type"
+ },
+ "2692fc6e-d544-475a-a3cf-b337cfc96f21": {
+  "display": "Angle Axis Value Controller",
+  "type": "lightform.object.value-controller.angle-axis"
+ },
+ "271b1abe-f9e0-424a-8cb7-a9f69528ed07": {
+  "display": "Lightform_AnyObjectCollectionInterface",
+  "type": "lightform.interface.anyobject-collection"
+ },
+ "272847ea-0362-4003-9bba-6cbfa7b23520": {
+  "display": "Plain Boolean Value Controller",
+  "type": "lightform.object.value-controller.plain-boolean"
+ },
+ "27b1bef0-3891-4cf6-ba12-c811116962da": {
+  "display": "Lightform_PostCreateInterface",
+  "type": "lightform.interface.post-create"
+ },
+ "2959b1d7-e9fa-4275-b8d9-970cd8375376": {
+  "display": "Wi Fi Network Client Create Result",
+  "type": "lightform.enum.wi-fi-network-client-create-result"
+ },
+ "29e0c06f-b165-4ed8-aded-1b3abe3768eb": {
+  "display": "Application User Interface Sizing",
+  "type": "lightform.enum.application-user-interface-sizing"
+ },
+ "2a110a33-33a8-4ac0-a42c-56163b8d9270": {
+  "display": "Key Combination",
+  "type": "lightform.object.key-combination"
+ },
+ "2b0438a5-03a5-4f6c-a4e7-3e59f7abd4ed": {
+  "display": "AnyObject Set Name Flag",
+  "type": "lightform.enum.anyobject-set-name-flag"
+ },
+ "2b20a827-393f-4d74-bab8-a8492d61e209": {
+  "display": "Archive Requirement Flag",
+  "type": "lightform.enum.archive-requirement-flag"
+ },
+ "2b3651eb-1e8e-4684-a8b1-18d8fd9460e4": {
+  "display": "Lightform_PreRemoveAllInterface",
+  "type": "lightform.interface.pre-remove-all"
+ },
+ "2b992d33-c112-451e-906f-bf8f134a48b4": {
+  "display": "Component Type Flag",
+  "type": "lightform.enum.component-type-flag"
+ },
+ "2bdd7c90-68d3-4296-804e-a84393478f36": {
+  "display": "Asset Registration Status",
+  "type": "lightform.enum.asset-registration-status"
+ },
+ "2c78a4b8-4100-4806-8746-3bacb4d3b238": {
+  "display": "Asset",
+  "type": "lightform.object.asset"
+ },
+ "2c8b8c8e-7d78-427f-be89-442b306efe06": {
+  "display": "Asset Type",
+  "type": "lightform.enum.asset-type"
+ },
+ "2cd5547f-98e2-4c63-8f03-480fb98848cd": {
+  "display": "Create Directories Result",
+  "type": "lightform.enum.standard-file-system-path.create-directories-result"
+ },
+ "2d8c92b3-c838-4b84-bde1-00a82560bfbe": {
+  "display": "Auxiliary Effect Image Queued Request Type",
+  "type": "lightform.enum.auxiliary-effect-image-queued-request-type"
+ },
+ "2f061267-17ae-444c-abb0-513ca41a2d76": {
+  "display": "Auxiliary Effect Image Work Flag",
+  "type": "lightform.enum.auxiliary-effect-image-work-flag"
+ },
+ "2f0d4cdc-da9f-4348-8baa-795c5537b490": {
+  "display": "YUV Component",
+  "type": "lightform.enum.yuv-component"
+ },
+ "2f13d643-b720-48e6-bcb4-4043608c1d5d": {
+  "display": "Lightform_PostReadInterface",
+  "type": "lightform.interface.post-read"
+ },
+ "2f4862ab-3af7-49ec-8337-1c1645f19da3": {
+  "display": "Standard Cursor",
+  "type": "lightform.enum.cursor-image-data.standard-cursor"
+ },
+ "2f5ef155-0a9e-4162-8ff8-e5450a1744fa": {
+  "display": "Boolean Value Controller",
+  "type": "lightform.object.value-controller.boolean"
+ },
+ "2fc07dac-450b-4245-ba0c-fe959085bb81": {
+  "display": "Storyblocks Can Download Asset Format Result",
+  "type": "lightform.enum.storyblocks-can-download-asset-format-result"
+ },
+ "2fd7897b-8874-4c9e-a1c3-9cd8ea99eb60": {
+  "display": "Lightform_BackgroundInterface",
+  "type": "lightform.interface.background"
+ },
+ "2fd93b3d-cd6b-461e-b53f-cb3a236a230a": {
+  "display": "Lightform_HasTransformInterface",
+  "type": "lightform.interface.has-transform"
+ },
+ "30015ce7-a309-4647-a5f2-f42a938a9ac4": {
+  "display": "Set Value Flag",
+  "type": "lightform.enum.set-value-flag"
+ },
+ "3065480d-7be4-4f54-9089-aa1b3c21a2b7": {
+  "display": "AnyObject Reference Flag",
+  "type": "lightform.enum.anyobject-reference-flag"
+ },
+ "317a8cf7-d3c3-4618-bbb8-510aa6fdf2fa": {
+  "display": "Master Slide",
+  "type": "lightform.object.master-slide"
+ },
+ "325f94a6-cb43-4955-aeae-d26b407cd2b8": {
+  "display": "Read Image Result",
+  "type": "lightform.enum.read-image-result"
+ },
+ "32b1fa36-a80d-4c92-8e30-b62ddb9fff9a": {
+  "display": "Lightform_ProjectInterface",
+  "type": "lightform.interface.project"
+ },
+ "32f71896-d01c-4026-ad59-e1b5fa9603bc": {
+  "display": "AnyObject Reference Message Result Flag",
+  "type": "lightform.enum.anyobject-reference-message-result-flag"
+ },
+ "33197d75-1276-4b73-8e95-1dc451a23df5": {
+  "display": "Projection Preview Effect Mode",
+  "type": "lightform.enum.projection-preview-effect-mode"
+ },
+ "357d9abc-17b0-422a-9618-a20f1e8b1427": {
+  "display": "Plain URL Value Controller",
+  "type": "lightform.object.value-controller.plain-url"
+ },
+ "3690a615-9a64-4bc2-8a3d-b31a29c3f2ba": {
+  "display": "Create Surface with Content",
+  "type": "lightform.object.project"
+ },
+ "36caaccf-befb-481f-82b8-00086dfe02ec": {
+  "display": "Lightform_Color4u8ValueControllerInterface",
+  "type": "lightform.interface.color4u8-value-controller"
+ },
+ "37a8e322-8f11-4c38-87d2-130019c469fa": {
+  "display": "Canvas RenderUI Layer",
+  "type": "lightform.enum.canvas-renderui-layer"
+ },
+ "37e28494-8952-41fd-9ad9-bdb229bb6357": {
+  "display": "Plain Timeline Time Value Controller",
+  "type": "lightform.object.value-controller.plain-timeline-time"
+ },
+ "3970eae4-fe10-4f39-9fe3-593351f954be": {
+  "display": "Lightform_ApplicationSettingsInterface",
+  "type": "lightform.interface.application-settings"
+ },
+ "39bde145-cac4-42b8-9a60-549a6e5c7e4d": {
+  "display": "Plain Double Value Controller",
+  "type": "lightform.object.value-controller.plain-double"
+ },
+ "3a03faef-1d69-4c9d-baa3-8412403b737f": {
+  "display": "Lightform_EffectPresetInterface",
+  "type": "lightform.interface.effect-preset"
+ },
+ "3a2d4f2f-8b11-49dc-9a8e-222040c5457e": {
+  "display": "Texture Create Flags",
+  "type": "lightform.enum.texture-create-flags"
+ },
+ "3a3be1ae-cc17-4a98-b69b-ad61a9780a8a": {
+  "display": "Log Level",
+  "type": "lightform.enum.log-level"
+ },
+ "3a48315c-44c1-430b-acb7-6d96ff81800b": {
+  "display": "QtEditorSettingsInterface",
+  "type": "lightform.interface.qt-editor-settings"
+ },
+ "3a6d9a08-5c1f-4788-9287-f35c3157e43d": {
+  "display": "Error",
+  "type": "lightform.enum.asset-status.error"
+ },
+ "3a80099a-f922-4ac1-8d0b-a720937d17fd": {
+  "display": "AnyObject Manager State",
+  "type": "lightform.enum.anyobject-manager-state"
+ },
+ "3aa73a53-3530-4885-95c7-6345ef4d3638": {
+  "display": "Published Presence",
+  "type": "lightform.enum.published-presence"
+ },
+ "3b4348bc-d32f-499c-97f5-4704e6bc0189": {
+  "display": "AnyObject Set Object Name Result",
+  "type": "lightform.enum.anyobject-set-object-name-result"
+ },
+ "3b793c17-cf21-4188-b478-8c88422ce440": {
+  "display": "Plain Vector2I Value Controller",
+  "type": "lightform.object.value-controller.plain-vector2i"
+ },
+ "3c6772b7-a789-4b0e-8647-2cc1075ff4e2": {
+  "display": "Application Release Channel",
+  "type": "lightform.enum.application-release-channel"
+ },
+ "3ccdc673-421c-44fe-85c9-5c7b62600f77": {
+  "display": "Force Display Keep Alive",
+  "type": "lightform.enum.force-display-keep-alive"
+ },
+ "3cf587c3-601c-4f5e-b7ef-0e233880b3d3": {
+  "display": "Lightform_BooleanValueControllerInterface",
+  "type": "lightform.interface.boolean-value-controller"
+ },
+ "3d309da6-3321-4d7e-8e63-843bdb30f5ac": {
+  "display": "Action Capability Flag",
+  "type": "lightform.enum.action-capability-flag"
+ },
+ "3f27ba06-feec-4df5-8288-a02c28372580": {
+  "display": "Apply Pick Flag",
+  "type": "lightform.enum.apply-pick-flag"
+ },
+ "3f327022-d916-44fe-9923-19671311b390": {
+  "display": "Get Cache Item Result",
+  "type": "lightform.enum.get-cache-item-result"
+ },
+ "3f9f9bfb-559a-4ef5-9517-9a162cc43c29": {
+  "display": "Lightform_StringValueControllerInterface",
+  "type": "lightform.interface.string-value-controller"
+ },
+ "3fed6282-7a64-41bf-9ae9-ad28688759b8": {
+  "display": "Validity Component",
+  "type": "lightform.enum.validity-component"
+ },
+ "40c7cb8f-2723-4e50-912e-0c642a128ab3": {
+  "display": "Canvas Artboard Rotation",
+  "type": "lightform.enum.canvas-artboard-rotation"
+ },
+ "426e96a3-58a1-4aef-93a0-0dd9433e4e7e": {
+  "display": "QtEffectObjectInterface",
+  "type": "lightform.interface.qt-effect-object"
+ },
+ "42aa21da-8361-4a4b-ba09-372ab68d1a49": {
+  "display": "Validity Update Result",
+  "type": "lightform.enum.validity-update-result"
+ },
+ "44f72f1c-0fca-47cc-9e5a-3cd1d5d1e304": {
+  "display": "Render Flush Type",
+  "type": "lightform.enum.render-flush-type"
+ },
+ "455e4476-dc0a-4bf0-abaf-4b3654e9dad6": {
+  "display": "Write Mask",
+  "type": "lightform.enum.write-mask"
+ },
+ "464822b2-80ff-49d7-8765-a0a8aa29210f": {
+  "display": "Blend Op",
+  "type": "lightform.enum.blend-op"
+ },
+ "464e6976-cedc-41ef-b6ce-327dab84c9fd": {
+  "display": "Vector3I Value Controller",
+  "type": "lightform.object.value-controller.vector3i"
+ },
+ "4684c658-890b-4248-8020-51a4b57c197e": {
+  "display": "Read Result",
+  "type": "lightform.enum.jpeg-reader.read-result"
+ },
+ "4738d6e5-3daf-4db0-86db-a7cd5c820f95": {
+  "display": "Lightform_Matrix3ValueControllerInterface",
+  "type": "lightform.interface.matrix3-value-controller"
+ },
+ "473b0616-fc1b-4fbb-a804-dde22cb66208": {
+  "display": "Welcome Page Action",
+  "type": "lightform.enum.welcome-page-action"
+ },
+ "4740e5c0-46e2-41f2-b08f-da4960e03b80": {
+  "display": "Json Document Value Type",
+  "type": "lightform.enum.json-document-value-type"
+ },
+ "47e7f20c-ae53-4d63-a9c4-807547349550": {
+  "display": "QtTreeModelNodeInterface",
+  "type": "lightform.interface.qt-tree-model-node"
+ },
+ "492f2b6d-4e4c-488f-b836-b00edf279107": {
+  "display": "Property Initializer Reason",
+  "type": "lightform.enum.property-initializer-reason"
+ },
+ "49846d04-043e-4ac4-a97e-bd27e05a91b3": {
+  "display": "Lightform_ContentEffectInterface",
+  "type": "lightform.interface.content-effect"
+ },
+ "49fb7bff-54f8-48a6-bffa-9b2dada9b38d": {
+  "display": "",
+  "type": "lightform.interface.qt-application-settings"
+ },
+ "4a164da7-c7cd-49ca-9087-38500ef58a09": {
+  "display": "Plain Distance Value Controller",
+  "type": "lightform.object.value-controller.plain-distance"
+ },
+ "4b8fb03e-4910-431a-adc5-92942d981845": {
+  "display": "Lightform_KeyCombinationInterface",
+  "type": "lightform.interface.key-combination"
+ },
+ "4bf0b4b9-237d-4473-94ba-7cfb051ba88f": {
+  "display": "Color4f Value Controller",
+  "type": "lightform.object.value-controller.color4f"
+ },
+ "4d48a97c-7629-4866-99fb-b8ad3c351c0b": {
+  "display": "Xml Node Type",
+  "type": "lightform.enum.xml-node-type"
+ },
+ "4db27739-3503-4bfe-b7b8-f9f1a0c85c62": {
+  "display": "Login Page Action",
+  "type": "lightform.enum.login-page-action"
+ },
+ "4e5db867-0a07-4a8d-83c4-56a8e88c2e71": {
+  "display": "Typed Value String Parse Result",
+  "type": "lightform.enum.typed-value-string-parse-result"
+ },
+ "4f07bfa9-86c2-490d-88e8-f6ea89ee12e2": {
+  "display": "Lightform_CloneableInterface",
+  "type": "lightform.interface.cloneable"
+ },
+ "4f30aa86-b68e-4346-9fdc-7ee811673e65": {
+  "display": "Lightform_DoubleValueControllerInterface",
+  "type": "lightform.interface.double-value-controller"
+ },
+ "4f5589f1-7115-4ecb-a254-7bdbe38218a9": {
+  "display": "Lightform_FloatValueControllerInterface",
+  "type": "lightform.interface.float-value-controller"
+ },
+ "50527047-bc92-4f8a-bc6f-e631405be2ec": {
+  "display": "Plain Transform3 Value Controller",
+  "type": "lightform.object.value-controller.plain-transform3"
+ },
+ "51b2b88e-83de-4e1b-b97e-618c165b5c81": {
+  "display": "Lightform_PathInterface",
+  "type": "lightform.interface.path"
+ },
+ "5288b29e-085c-45a8-86ea-53f2a166da27": {
+  "display": "Storyblocks Download Item Status",
+  "type": "lightform.enum.storyblocks-download-item-status"
+ },
+ "53e2c29c-b552-4df6-b567-e5d3fdc0b264": {
+  "display": "AnyObject Replace Reference Flag",
+  "type": "lightform.enum.anyobject-replace-reference-flag"
+ },
+ "54c33e06-3962-4d70-8259-1e08c015a79e": {
+  "display": "State",
+  "type": "lightform.enum.pixel-input-mode.state"
+ },
+ "54d89a4d-b5e4-4cdd-9833-4a88a5330602": {
+  "display": "Pixel Format",
+  "type": "lightform.enum.pixel-format"
+ },
+ "552eb03b-538d-4966-8f6e-cf6d71a8d5b3": {
+  "display": "Lightform_UuidValueControllerInterface",
+  "type": "lightform.interface.uuid-value-controller"
+ },
+ "554aaebe-8de7-420e-a058-c27f4c005baa": {
+  "display": "Asset Browser Query Asset Type Flag",
+  "type": "lightform.enum.asset-browser-query-asset-type-flag"
+ },
+ "5592bd5b-7f19-4027-93ec-0f66d00cf899": {
+  "display": "Quaternion Value Controller",
+  "type": "lightform.object.value-controller.quaternion"
+ },
+ "560bf574-ee3b-4205-82be-e83966d75a51": {
+  "display": "AnyObject Set Reference Result",
+  "type": "lightform.enum.anyobject-set-reference-result"
+ },
+ "574841f1-6154-4132-aa03-eb8f31b050db": {
+  "display": "Lightform_Transform3ValueControllerInterface",
+  "type": "lightform.interface.transform3-value-controller"
+ },
+ "575b049c-a639-476e-9eab-f5822961203a": {
+  "display": "Transform2 Value Controller",
+  "type": "lightform.object.value-controller.transform2"
+ },
+ "58328de7-fd85-440e-9a09-920164d74f1d": {
+  "display": "Editor Settings",
+  "type": "lightform.object.editor-settings"
+ },
+ "5875ca01-084a-4880-a33e-ca681088f289": {
+  "display": "Structure Primitive Create Flag",
+  "type": "lightform.enum.structure-primitive-create-flag"
+ },
+ "5904994b-0664-4673-a178-cf9a0503de98": {
+  "display": "Distance Value Controller",
+  "type": "lightform.object.value-controller.distance"
+ },
+ "594ebfe4-4600-43c7-86bd-13fe64c0f626": {
+  "display": "Package Result",
+  "type": "lightform.enum.project-packager.package-result"
+ },
+ "59e69372-7da5-47fc-836c-5d16eb20e772": {
+  "display": "fill-rule=\"evenodd\"",
+  "type": "lightform.enum.svg-document.write-result"
+ },
+ "5a4f2f58-5fd1-4e0e-af7e-a52b08ed3859": {
+  "display": "Open Mode",
+  "type": "lightform.enum.file-accessor.open-mode"
+ },
+ "5a9bc0ff-b50e-419c-84cd-4645ce87fcaf": {
+  "display": "Design Page Action",
+  "type": "lightform.enum.design-page-action"
+ },
+ "5aa5532d-33f4-44df-868a-3713b66b1ae5": {
+  "display": "Render Resource Payload Type",
+  "type": "lightform.enum.render-resource-payload-type"
+ },
+ "5c0bad84-d6c0-46d7-8c79-d30beeba8608": {
+  "display": "Lightform_ScanSessionInterface",
+  "type": "lightform.interface.scan-session"
+ },
+ "5c395803-8834-4355-be0e-f319ed884d5c": {
+  "display": "Lightform_Vector4ValueControllerInterface",
+  "type": "lightform.interface.vector4-value-controller"
+ },
+ "5ccd295e-7742-453b-9c0d-5b2f1c537f35": {
+  "display": "Value Controller",
+  "type": "lightform.object.value-controller"
+ },
+ "5cd07292-1668-4e55-b9bf-a030c014f770": {
+  "display": "Standard Key",
+  "type": "lightform.enum.standard-key"
+ },
+ "5da92d20-8d86-4886-a3e6-145ea6718468": {
+  "display": "Image Format",
+  "type": "lightform.enum.cursor-image-data.image-format"
+ },
+ "5dc58137-40c6-41ba-96a6-7b183f923925": {
+  "display": "Global Action Manager",
+  "type": "lightform.enum.global-action-manager"
+ },
+ "5e07ccd5-653c-410b-8300-277995beace3": {
+  "display": "Mouse Button Flag",
+  "type": "lightform.enum.mouse-button-flag"
+ },
+ "5ea78398-7ab0-4bd1-8244-8a39ba771689": {
+  "display": "Lightform_ObjectReferenceValueControllerInterface",
+  "type": "lightform.interface.object-reference-value-controller"
+ },
+ "5ecb0736-84d4-4f40-bbd3-b4912c090c77": {
+  "display": "Pixel Tool Action",
+  "type": "lightform.enum.pixel-tool-action"
+ },
+ "610b291c-3697-499a-93e0-4c66178488da": {
+  "display": "Lightform_EffectInterface",
+  "type": "lightform.interface.effect"
+ },
+ "61911c8e-f2f8-46ea-97f4-900ee91cfd8c": {
+  "display": "Lightform_Vector2ValueControllerInterface",
+  "type": "lightform.interface.vector2-value-controller"
+ },
+ "62db9913-7be7-4fcb-9b79-7049acb7fd26": {
+  "display": "Lightform_SurfaceInterface",
+  "type": "lightform.interface.surface"
+ },
+ "62f40b6b-0f37-447e-a5a3-926b1d913425": {
+  "display": "Open For Write Flag",
+  "type": "lightform.enum.open-for-write-flag"
+ },
+ "6409f3c3-e1d5-45ac-a134-9f9cece7a040": {
+  "display": "AnyObject Status",
+  "type": "lightform.enum.anyobject-status"
+ },
+ "647c6459-3707-4525-bd96-b808452a2017": {
+  "display": "Create Mode",
+  "type": "lightform.enum.create-project-surface-geometry-input-mode.create-mode"
+ },
+ "64883baf-6ca8-48b9-b5c0-22a42cea7d10": {
+  "display": "Canvas Timeline Tick Result",
+  "type": "lightform.enum.canvas-timeline-tick-result"
+ },
+ "665e2a7c-af50-42c1-ad4c-8925f1d6bf6f": {
+  "display": "Vector2I Value Controller",
+  "type": "lightform.object.value-controller.vector2i"
+ },
+ "6744bb16-041e-4a04-8456-b04c4c4afee5": {
+  "display": "Dialog Application Settings",
+  "type": "lightform.object.dialog-application-settings"
+ },
+ "67b8d7bf-d0e1-4c5b-9ece-3b82599517f3": {
+  "display": "QtCompositePathInterface",
+  "type": "lightform.interface.qt-composite-path"
+ },
+ "68f4da70-dec5-4034-aa2c-9f400d5cae80": {
+  "display": "QtSurfaceInterface",
+  "type": "lightform.interface.qt-surface"
+ },
+ "694b92b3-e1ab-4081-a503-4293bb5b3749": {
+  "display": "Property Flag",
+  "type": "lightform.enum.property-flag"
+ },
+ "6d507be7-e86e-469e-bb4f-7865d505e902": {
+  "display": "YUV Pixel Format",
+  "type": "lightform.enum.yuv-pixel-format"
+ },
+ "6d7ddf40-509b-4222-a132-8e34787c8a6b": {
+  "display": "Creator Move Tool Action",
+  "type": "lightform.enum.creator-move-tool-action"
+ },
+ "6e541af9-4ac9-4a66-a9bd-39a62519f478": {
+  "display": "Add Referenced Asset Result",
+  "type": "lightform.enum.add-referenced-asset-result"
+ },
+ "6e61ab9c-9650-45ba-b7bf-37633692ddc8": {
+  "display": "AnyObject Set Reference Mark Flag",
+  "type": "lightform.enum.anyobject-set-reference-mark-flag"
+ },
+ "6ef81c7f-8051-46fb-a2e3-51bb2b0227bc": {
+  "display": "Lightform_CompositePathInterface",
+  "type": "lightform.interface.composite-path"
+ },
+ "6fbe92fc-b098-4535-b866-09fd7fbde5e9": {
+  "display": "QtDialogApplicationSettingsInterface",
+  "type": "lightform.interface.qt-dialog-application-settings"
+ },
+ "70612e3b-9a44-427b-b927-1642b65a3c68": {
+  "display": "Sampler Wrap Mode",
+  "type": "lightform.enum.sampler-wrap-mode"
+ },
+ "708daf83-7b36-43ed-825d-3777246d8b4d": {
+  "display": "Lightform_TransformableInterface",
+  "type": "lightform.interface.transformable"
+ },
+ "7443b3bd-b211-4470-ba91-148258267bdd": {
+  "display": "Status",
+  "type": "lightform.enum.asset-status.status"
+ },
+ "74aaafef-ac5b-4f94-b09e-9ac286f7c5ec": {
+  "display": "Key Modifier Flag",
+  "type": "lightform.enum.key-modifier-flag"
+ },
+ "74adc767-3f08-44d2-a270-9cd21d8a71c7": {
+  "display": "Float Value Controller",
+  "type": "lightform.object.value-controller.float"
+ },
+ "750610f9-8027-44fe-8b4a-d4be2f4ab045": {
+  "display": "Image Blend Mode",
+  "type": "lightform.enum.image-blend-mode"
+ },
+ "754b9c0d-a4c2-406f-9a42-425f8122e2c2": {
+  "display": "Plain Vector2 Value Controller",
+  "type": "lightform.object.value-controller.plain-vector2"
+ },
+ "761d58f9-63ef-435a-936c-814b80df4147": {
+  "display": "Matrix3 Value Controller",
+  "type": "lightform.object.value-controller.matrix3"
+ },
+ "7707e9b3-aedc-43c1-b7de-47b319b3ace9": {
+  "display": "QtSlideInterface",
+  "type": "lightform.interface.qt-slide"
+ },
+ "772c9785-2d36-46bd-b17d-2995e6990d24": {
+  "display": "Write Result",
+  "type": "lightform.enum.jpeg-writer.write-result"
+ },
+ "77fb4305-f50b-4e25-979b-860c490676f1": {
+  "display": "Composite Path",
+  "type": "lightform.object.composite-path"
+ },
+ "782707d7-49fb-49e8-b0a6-36ba518fa14f": {
+  "display": "Lightform_BezierInterface",
+  "type": "lightform.interface.bezier"
+ },
+ "783e34a9-5e8b-4ec8-b16c-66bdb6cca3ce": {
+  "display": "Vector2 Value Controller",
+  "type": "lightform.object.value-controller.vector2"
+ },
+ "78757698-a3d2-4aac-8f4a-0249d9c5ff92": {
+  "display": "Horizontal Alignment",
+  "type": "lightform.enum.horizontal-alignment"
+ },
+ "78eeda03-f82e-4e85-bb57-3cb481a6c667": {
+  "display": "QtMasterSlideInterface",
+  "type": "lightform.interface.qt-master-slide"
+ },
+ "7952bce7-9fdc-467b-8156-8efaae594ffe": {
+  "display": "Path Boolean Operator",
+  "type": "lightform.enum.path-boolean-operator"
+ },
+ "7a0b2408-c93d-4f62-8b49-6f4dbb0d2807": {
+  "display": "File System Entry Type",
+  "type": "lightform.enum.file-system-entry-type"
+ },
+ "7bc9cc09-2c34-4e31-a405-e9ef35701c11": {
+  "display": "Tool",
+  "type": "lightform.enum.pixel-input-mode.tool"
+ },
+ "7c0b2130-71dd-44f9-81f2-3fbfb860fb5b": {
+  "display": "Property",
+  "type": "lightform.object.property"
+ },
+ "7c8af18c-6998-41ae-8df1-fa66733b00af": {
+  "display": "AnyObject Replace Reference Result",
+  "type": "lightform.enum.anyobject-replace-reference-result"
+ },
+ "7c8d4e9a-367d-4719-a532-97d1c99a2719": {
+  "display": "Preferred Log Listener Type",
+  "type": "lightform.enum.preferred-log-listener-type"
+ },
+ "7dcba627-7b15-4f85-91f2-92242bc7e13e": {
+  "display": "AnyObject Manager Write Flag",
+  "type": "lightform.enum.anyobject-manager-write-flag"
+ },
+ "7dd31893-9c18-496b-99df-3a0b32cf7d51": {
+  "display": "Scribble Plane",
+  "type": "lightform.enum.scribble-plane"
+ },
+ "7f958847-df8f-4373-8d9f-00d0b71d7491": {
+  "display": "Vertical Alignment",
+  "type": "lightform.enum.vertical-alignment"
+ },
+ "80cc50e6-8401-4ffd-bfbf-e91cf2b78953": {
+  "display": "Lightform_AngleAxisValueControllerInterface",
+  "type": "lightform.interface.angle-axis-value-controller"
+ },
+ "80e9ff60-4d4c-44e5-82f9-902fffd4362a": {
+  "display": "Storyblocks Asset Resource Type",
+  "type": "lightform.enum.storyblocks-asset-resource-type"
+ },
+ "8157a70d-26b8-4c2b-892e-ed4d4db80ebc": {
+  "display": "Memory File Cache Memory Eviction Policy",
+  "type": "lightform.enum.memory-file-cache-memory-eviction-policy"
+ },
+ "816ffc2d-f1a2-4512-9d4e-371a8e72d423": {
+  "display": "Wi Fi Scan Result",
+  "type": "lightform.enum.wi-fi-scan-result"
+ },
+ "83012e6c-600f-4ce6-8afb-fdb7495d462f": {
+  "display": "Clear Type",
+  "type": "lightform.enum.clear-type"
+ },
+ "831e6442-f454-48ff-b361-043327dd59ac": {
+  "display": "Property Array",
+  "type": "lightform.object.property-array"
+ },
+ "83b2615d-0620-4834-be8e-28d2376df33d": {
+  "display": "Content Scaling",
+  "type": "lightform.enum.content-scaling"
+ },
+ "86210048-b6f4-4279-b0c9-e4e5b4e30378": {
+  "display": "Lightform_PropertyInterface",
+  "type": "lightform.interface.property"
+ },
+ "86537c97-fd6d-4401-aaa1-bb8f73694942": {
+  "display": "Scan ImageID",
+  "type": "lightform.enum.scan-imageid"
+ },
+ "865d671d-b500-4444-a360-dbaa60a4355a": {
+  "display": "Plain Matrix3 Value Controller",
+  "type": "lightform.object.value-controller.plain-matrix3"
+ },
+ "865db8a2-ad30-477a-aa56-4becae810f9d": {
+  "display": "Plain Enum Value Controller",
+  "type": "lightform.object.value-controller.plain-enum"
+ },
+ "86f37c0b-99d5-43be-a735-e009c6faa1cd": {
+  "display": "Lightform_ValueControllerInterface",
+  "type": "lightform.interface.value-controller"
+ },
+ "870d1616-463e-42eb-a0af-0d2dbe87867d": {
+  "display": "Sampler Filtering Mode",
+  "type": "lightform.enum.sampler-filtering-mode"
+ },
+ "87227713-2651-43af-b34b-32bfaea56aa1": {
+  "display": "Lightform_CanvasInterface",
+  "type": "lightform.interface.canvas"
+ },
+ "8797dec6-fd85-42a3-b151-5c9ebb1ef043": {
+  "display": "Pick Action",
+  "type": "lightform.enum.pick-action"
+ },
+ "89191aba-ac66-4aca-b2af-02b0b09f6c87": {
+  "display": "UUID Value Controller",
+  "type": "lightform.object.value-controller.uuid"
+ },
+ "89c0a093-1d84-49be-bab4-4b84ec31b4c9": {
+  "display": "Video Status",
+  "type": "lightform.enum.video-status"
+ },
+ "8a71f1e2-9e51-495a-8543-2b511916807f": {
+  "display": "Master Surface",
+  "type": "lightform.object.master-surface"
+ },
+ "8b2d0d8b-ac88-40a8-8652-86240b7b2452": {
+  "display": "Plain Color4u8 Value Controller",
+  "type": "lightform.object.value-controller.plain-color4u8"
+ },
+ "8b8762e7-77cb-445a-ba74-7efb3645b5c7": {
+  "display": "Color Channel",
+  "type": "lightform.enum.color-channel"
+ },
+ "8c9c9071-3a5c-42dc-961d-afe260fd493b": {
+  "display": "Memory Size Threshold Operator",
+  "type": "lightform.enum.memory-size-threshold-operator"
+ },
+ "8d16567b-6c9b-4c05-a275-4ace00a2ca7c": {
+  "display": "Memory File Cache Get Result",
+  "type": "lightform.enum.memory-file-cache-get-result"
+ },
+ "8dadb0a7-9a46-47c1-a571-d23c498edb9a": {
+  "display": "Asset Reference Message Status",
+  "type": "lightform.enum.asset-reference-message-status"
+ },
+ "8df0957f-9ef0-405f-9bb6-d1fddceb4c5c": {
+  "display": "Asset Resource Type",
+  "type": "lightform.enum.asset-resource-type"
+ },
+ "8e680994-692d-4878-9dec-c63f3d53c305": {
+  "display": "Render Resource Type",
+  "type": "lightform.enum.render-resource-type"
+ },
+ "8eb4ce51-ffe5-43ce-9ea7-d0c4babcdedc": {
+  "display": "Lightform_TimelineDurationValueControllerInterface",
+  "type": "lightform.interface.timeline-duration-value-controller"
+ },
+ "90e81325-5d9c-47a6-95d3-8f68fc41e043": {
+  "display": "Lightform_EditorSettingsInterface",
+  "type": "lightform.interface.editor-settings"
+ },
+ "91578ea4-18d6-41b8-a6ad-50d8160d933c": {
+  "display": "Property Control Type",
+  "type": "lightform.enum.property-control-type"
+ },
+ "9171c1ff-49fc-4e72-91cc-c1877977542d": {
+  "display": "1.6.37",
+  "type": "lightform.enum.png-reader.read-result"
+ },
+ "9216c304-6771-470e-8a53-28b5d7d7037a": {
+  "display": "Asset Metric Flag",
+  "type": "lightform.enum.asset-metric-flag"
+ },
+ "925f8bd3-4a26-4ad7-af17-be06aa53bfff": {
+  "display": "Lightform_CursorInterface",
+  "type": "lightform.interface.cursor"
+ },
+ "92f02c19-a8ff-44fe-b272-2c321f2716cc": {
+  "display": "Plain Vector3 Value Controller",
+  "type": "lightform.object.value-controller.plain-vector3"
+ },
+ "92fd7e3c-1bcf-420f-a770-4af5bc6d2e8d": {
+  "display": "visual",
+  "type": "lightform.object.background"
+ },
+ "935edd97-8c7f-4f6a-b61a-deadc4ed2ea4": {
+  "display": "Occurrence",
+  "type": "lightform.enum.data-header.occurrence"
+ },
+ "942d4d4f-669b-45d9-b499-7ff2efdc4496": {
+  "display": "Archive Add File Result",
+  "type": "lightform.enum.archive-add-file-result"
+ },
+ "94c10370-69c2-4d5d-8afb-ad42a174a497": {
+  "display": "Plain Date Time Value Controller",
+  "type": "lightform.object.value-controller.plain-date-time"
+ },
+ "94c4a99a-a816-4095-b09c-6c94ae04b819": {
+  "display": "Structure Evaluation Result",
+  "type": "lightform.enum.structure-evaluation-result"
+ },
+ "972464cd-9bef-45dd-af8a-b56a89ec81b2": {
+  "display": "Lightform_TimelineTimeValueControllerInterface",
+  "type": "lightform.interface.timeline-time-value-controller"
+ },
+ "977fdb5b-6fac-4ad2-a40e-6d18bdb49207": {
+  "display": "FBO Attachment Flag",
+  "type": "lightform.enum.fbo-attachment-flag"
+ },
+ "97b2ee93-1b22-4b4d-9b95-35ed099092ab": {
+  "display": "Content Effect",
+  "type": "lightform.object.content-effect"
+ },
+ "97c09786-302e-461a-9edc-a92c3c189f4c": {
+  "display": "Data Chunk Writer Style",
+  "type": "lightform.enum.data-chunk-writer-style"
+ },
+ "98649ce9-99f2-4ca6-b21d-6469cc1210de": {
+  "display": "AnyObject Manager Serialization Format",
+  "type": "lightform.enum.anyobject-manager-serialization-format"
+ },
+ "98655290-d29b-4430-8e91-23687656bc79": {
+  "display": "Value Type",
+  "type": "lightform.enum.value-type"
+ },
+ "9950b9f5-7673-431f-9c8e-8ee838b88d30": {
+  "display": "QtScanSessionInterface",
+  "type": "lightform.interface.qt-scan-session"
+ },
+ "9b7fd8be-9d98-4e79-a669-35cb3b976c4b": {
+  "display": "Lightform_TimelineTickInterface",
+  "type": "lightform.interface.timeline-tick"
+ },
+ "9ba5040f-8b5e-46db-bdf7-01617bbe7a20": {
+  "display": "Lightform_SerializableStateInterface",
+  "type": "lightform.interface.serializable-state"
+ },
+ "9c145c3d-88fd-426a-93cc-5aa717c6e061": {
+  "display": "Lightform_CreateByInputModeInterface",
+  "type": "lightform.interface.create-by-input-mode"
+ },
+ "9ce2cb97-27a7-408d-bb01-29369f90ede1": {
+  "display": "Standard Uniform Buffer Type",
+  "type": "lightform.enum.standard-uniform-buffer-type"
+ },
+ "9ce4e316-0d7f-4993-bfc9-6622015b6712": {
+  "display": "Create Project Geometry Action",
+  "type": "lightform.enum.create-project-geometry-action"
+ },
+ "9cf8d386-cc4c-4cac-add7-035ec023c19c": {
+  "display": "Channel Mode",
+  "type": "lightform.enum.pixel-input-mode.channel-mode"
+ },
+ "9d2c1ad9-144f-41c7-9aa4-468308a68861": {
+  "display": "Clear Cache Flag",
+  "type": "lightform.enum.clear-cache-flag"
+ },
+ "9d8035a2-f0a7-40f0-b4bf-cb385a48121b": {
+  "display": "Lightform_DelegateRemoveObjectInterface",
+  "type": "lightform.interface.delegate-remove-object"
+ },
+ "9ef26590-2138-4341-9a5b-5e228c3da5ec": {
+  "display": "Double Value Controller",
+  "type": "lightform.object.value-controller.double"
+ },
+ "9f2ee97c-c951-4c8e-838e-d6e31d82bc98": {
+  "display": "Asset Browser Query Sort Order",
+  "type": "lightform.enum.asset-browser-query-sort-order"
+ },
+ "9f99cb1b-f24f-4afb-9a02-298f245a893d": {
+  "display": "Distance Unit",
+  "type": "lightform.enum.distance-unit"
+ },
+ "9fcd4ca3-faa6-46c9-9917-8a920a999ea1": {
+  "display": "Plain File System Path Value Controller",
+  "type": "lightform.object.value-controller.plain-file-system-path"
+ },
+ "9fe899b4-47ba-45e7-87ad-0cb4bd43c68e": {
+  "display": "Time Command Type",
+  "type": "lightform.enum.time-command-type"
+ },
+ "a0128dec-0e4a-4b91-933e-a259e8fb48b3": {
+  "display": "Property Value Comparison Result",
+  "type": "lightform.enum.property-value-comparison-result"
+ },
+ "a156d81e-6260-4005-ae10-c398ec3d90ca": {
+  "display": "Application Model",
+  "type": "lightform.object.application-model"
+ },
+ "a185d146-1bf8-4b7c-8037-1a0ab005b53a": {
+  "display": "Component Type",
+  "type": "lightform.enum.component-type"
+ },
+ "a2ae2704-742e-46fb-8795-0c15fa0edb08": {
+  "display": "Cache Serialize Item Result",
+  "type": "lightform.enum.cache-serialize-item-result"
+ },
+ "a4c69dbf-1726-4f18-983f-3f67049331d5": {
+  "display": "Undoable Action Context State",
+  "type": "lightform.enum.undoable-action-context-state"
+ },
+ "a58a0e2d-172f-44f8-9e28-4f14bf3a6c60": {
+  "display": "Asset Browser Collection Flag",
+  "type": "lightform.enum.asset-browser-collection-flag"
+ },
+ "a69e566f-1805-4c65-8d7a-5401c363fb0e": {
+  "display": "Project Save Method",
+  "type": "lightform.enum.project-save-method"
+ },
+ "a7119cb5-eced-48c3-8c6b-28b594de9304": {
+  "display": "Effect Preset",
+  "type": "lightform.object.effect-preset"
+ },
+ "a799e093-a185-472b-ab1b-1ab789e3e23b": {
+  "display": "Invalid primitive when setting structure.",
+  "type": "lightform.object.structure"
+ },
+ "a7b73b00-8117-4586-ab09-c64b5bb42f78": {
+  "display": "Pick Select Modifier",
+  "type": "lightform.enum.pick-select-modifier"
+ },
+ "a7c24c6e-eb84-4a94-b828-d9aa675bba04": {
+  "display": "Standard Sampler",
+  "type": "lightform.enum.standard-sampler"
+ },
+ "a8e2656f-ef09-4b0f-ac42-8ffc722e28ee": {
+  "display": "QtMasterSurfaceInterface",
+  "type": "lightform.interface.qt-master-surface"
+ },
+ "aa792293-a02c-402c-96f4-0fd17fd16e17": {
+  "display": "AnyObject Manager Read Update Component",
+  "type": "lightform.enum.anyobject-manager-read-update-component"
+ },
+ "aa89dcfc-94f7-4d8d-9553-e425974d0739": {
+  "display": "Lightform_QuaternionValueControllerInterface",
+  "type": "lightform.interface.quaternion-value-controller"
+ },
+ "ab09fc4d-a71a-48c2-8cdb-911a53cd1a42": {
+  "display": "Lightform_RemoveAdditionalObjectsInterface",
+  "type": "lightform.interface.remove-additional-objects"
+ },
+ "ab571838-8586-45db-96d3-00028fca3b25": {
+  "display": "QtApplicationModelInterface",
+  "type": "lightform.interface.qt-application-model"
+ },
+ "ab63f93c-ae75-41cc-a7a1-eaddd9eeabfb": {
+  "display": "Timeline Time Value Controller",
+  "type": "lightform.object.value-controller.timeline-time"
+ },
+ "aca33b00-453f-4af3-a5b5-2488aa79af55": {
+  "display": "Storyblocks Download Request Result",
+  "type": "lightform.enum.storyblocks-download-request-result"
+ },
+ "acc9d6a8-c4d1-46aa-b1fb-a55c5f24ed96": {
+  "display": "Creation Object Type",
+  "type": "lightform.enum.path-object.creation-object-type"
+ },
+ "ad1f2190-e3c8-4212-88a7-2652372a3299": {
+  "display": "Transform3 Value Controller",
+  "type": "lightform.object.value-controller.transform3"
+ },
+ "adac507c-2410-43bb-a5b4-37b9a131aa74": {
+  "display": "QtSelectionSetInterface",
+  "type": "lightform.interface.qt-selection-set"
+ },
+ "af27c5cb-c56b-49b0-8860-1abf64ba962c": {
+  "display": "Auxiliary Effect Images Invalidate Flag",
+  "type": "lightform.enum.auxiliary-effect-images-invalidate-flag"
+ },
+ "af757d01-4444-449d-9e1f-55bf0eafee72": {
+  "display": "Project Object Remove Flag",
+  "type": "lightform.enum.project-object-remove-flag"
+ },
+ "b08d7499-bfc6-4fb5-99c1-39eb6020709c": {
+  "display": "Asset Registration Flag",
+  "type": "lightform.enum.asset-registration-flag"
+ },
+ "b0f9859b-0198-4189-9b27-c93bdb075944": {
+  "display": "Lightform_Transform2ValueControllerInterface",
+  "type": "lightform.interface.transform2-value-controller"
+ },
+ "b22f7da8-de0b-4e3c-ae5f-8735890a89f6": {
+  "display": "Path",
+  "type": "lightform.object.path"
+ },
+ "b2996c4e-6143-47f8-96e0-1d56c0dfa71a": {
+  "display": "liteffect",
+  "type": "lightform.enum.effect-data-shader-parameter.type"
+ },
+ "b2e9423c-9cb5-4514-a691-ab9cb980abe0": {
+  "display": "AnyObject Reference Message Notify Flag",
+  "type": "lightform.enum.anyobject-reference-message-notify-flag"
+ },
+ "b3439a65-3ca5-4b33-9367-3590e5aa9268": {
+  "display": "Timeline Tick Result",
+  "type": "lightform.enum.timeline-tick-result"
+ },
+ "b39dccea-5a39-4bdb-822c-8fbf88019b3b": {
+  "display": "Lightform_DateTimeValueControllerInterface",
+  "type": "lightform.interface.date-time-value-controller"
+ },
+ "b3f643bd-a021-4dae-8e84-8d2250f44147": {
+  "display": "Application Updater Technique",
+  "type": "lightform.enum.application-updater-technique"
+ },
+ "b47586ce-2580-4e51-9570-29490f4a3ca9": {
+  "display": "Plain Vector3I Value Controller",
+  "type": "lightform.object.value-controller.plain-vector3i"
+ },
+ "b598d4df-2b8e-4a61-b367-2748825623fd": {
+  "display": "Transform Space",
+  "type": "lightform.enum.transform-space"
+ },
+ "b652937e-6c94-447b-89f1-63928a3bdcd6": {
+  "display": "Plain Matrix4 Value Controller",
+  "type": "lightform.object.value-controller.plain-matrix4"
+ },
+ "b6ec8eda-9c87-47a9-b64d-faa437ee6755": {
+  "display": "URL Value Controller",
+  "type": "lightform.object.value-controller.url"
+ },
+ "b7378444-fca4-4657-9ae7-b15dc26382ea": {
+  "display": "Compositing Source Format",
+  "type": "lightform.enum.compositing-source-format"
+ },
+ "b8125fbc-e325-46b0-8d84-749ebe9079c2": {
+  "display": "Process Close Flag",
+  "type": "lightform.enum.process-close-flag"
+ },
+ "b8cce248-2411-482b-8bd2-33517272abca": {
+  "display": "Control Page Action",
+  "type": "lightform.enum.control-page-action"
+ },
+ "b9993c74-7352-4318-a29a-0f7aa45d401d": {
+  "display": "Lightform_PropertyCollectionInterface",
+  "type": "lightform.interface.property-collection"
+ },
+ "bae36e1b-53a6-439f-9f36-de9e7a8e74ed": {
+  "display": "Lightform_ExecuteCommandInterface",
+  "type": "lightform.interface.execute-command"
+ },
+ "bb558962-487b-4b96-82d4-a6ae51c6c1d1": {
+  "display": "Object",
+  "type": "lightform.object"
+ },
+ "bbfcf1e9-e5e0-4191-a50e-8b625ab85882": {
+  "display": "Timeline Duration Value Controller",
+  "type": "lightform.object.value-controller.timeline-duration"
+ },
+ "bc916434-ca47-43b7-919b-23902b15e658": {
+  "display": "Plain Color4f Value Controller",
+  "type": "lightform.object.value-controller.plain-color4f"
+ },
+ "bcbb7707-0ccc-4ee8-9f10-af7170368b2e": {
+  "display": "QtPathInterface",
+  "type": "lightform.interface.qt-path"
+ },
+ "bee42984-e8b1-4eb4-88cf-a228052bf685": {
+  "display": "AnyObject Create Reason",
+  "type": "lightform.enum.anyobject-create-reason"
+ },
+ "beeca7ce-6061-486b-8fef-c1f7d8b40d69": {
+  "display": "Lightform_Vector4IValueControllerInterface",
+  "type": "lightform.interface.vector4i-value-controller"
+ },
+ "c03274ee-9bf8-4a9d-b27a-a6a35b648ac7": {
+  "display": "Date Time Value Controller",
+  "type": "lightform.object.value-controller.date-time"
+ },
+ "c10ca5d9-d79e-47d3-b216-3e140ee597f5": {
+  "display": "Plain Int32 Value Controller",
+  "type": "lightform.object.value-controller.plain-int32"
+ },
+ "c1ae1dc1-3f9f-42e5-b3f8-7d3435c4cdf0": {
+  "display": "Texture Channel",
+  "type": "lightform.enum.texture-channel"
+ },
+ "c1b9f7e6-f91b-424e-8c82-25657f28dc5a": {
+  "display": "Plain Vector4 Value Controller",
+  "type": "lightform.object.value-controller.plain-vector4"
+ },
+ "c2106337-9373-467c-8b0a-31a9b673b1a0": {
+  "display": "QtTreeModelInterface",
+  "type": "lightform.interface.qt-tree-model"
+ },
+ "c232d7f2-f4a6-4895-be7d-a3b8b5206526": {
+  "display": "Component State Flag",
+  "type": "lightform.enum.component-state-flag"
+ },
+ "c39a7453-9417-4f97-a938-3a072bd82826": {
+  "display": "Storyblocks Video Quality",
+  "type": "lightform.enum.storyblocks-video-quality"
+ },
+ "c5a0aace-21fd-4c6c-90ee-93a5a0fa5dc7": {
+  "display": "Enum Value Controller",
+  "type": "lightform.object.value-controller.enum"
+ },
+ "c64a2915-635b-4869-a89a-fb6e8b737bf9": {
+  "display": "Lightform_UrlValueControllerInterface",
+  "type": "lightform.interface.url-value-controller"
+ },
+ "c67ec57d-cbc4-4be2-b3e1-ba45e2c19e26": {
+  "display": "Content Effect Type",
+  "type": "lightform.enum.content-effect-type"
+ },
+ "c73e3751-98a8-4851-9f65-3e7f832b46cf": {
+  "display": "QtAnyObjectInterface",
+  "type": "lightform.interface.qt-anyobject"
+ },
+ "c77d9057-09ec-4020-88e1-5a8b883ba191": {
+  "display": "AnyObject Obsolete Status",
+  "type": "lightform.enum.anyobject-obsolete-status"
+ },
+ "c85e3b1c-44d4-4e1e-844c-5b85e71b6c87": {
+  "display": "Lightform_Int32ValueControllerInterface",
+  "type": "lightform.interface.int32-value-controller"
+ },
+ "c8b9c9bd-a83b-4fae-ba05-b83e0f756ca7": {
+  "display": "Video Decoder Start Decoding Result",
+  "type": "lightform.enum.video-decoder-start-decoding-result"
+ },
+ "ca6df25d-e991-44da-a04c-0047b6d9a615": {
+  "display": "Vector4 Value Controller",
+  "type": "lightform.object.value-controller.vector4"
+ },
+ "cae0640a-b391-40fc-8918-cb841717f210": {
+  "display": "QtProjectInterface",
+  "type": "lightform.interface.qt-project"
+ },
+ "cbb3043c-8422-46bf-9a69-ddf167245e60": {
+  "display": "Cache Adding Value Callback Result",
+  "type": "lightform.enum.cache-adding-value-callback-result"
+ },
+ "cc22c1a3-a651-4842-9dd4-dad79ec5c449": {
+  "display": "Modify Array Flag",
+  "type": "lightform.enum.modify-array-flag"
+ },
+ "cc591749-3107-41e3-ad6a-335ffdb6a532": {
+  "display": "Lightform_Matrix4ValueControllerInterface",
+  "type": "lightform.interface.matrix4-value-controller"
+ },
+ "ccd7c48f-16ff-4d73-a7d8-758bbf5dc644": {
+  "display": "Which Standard File System Path",
+  "type": "lightform.enum.which-standard-file-system-path"
+ },
+ "cd01487f-8dfa-45e7-a49d-8d99fefca940": {
+  "display": "Int64 Value Controller",
+  "type": "lightform.object.value-controller.int64"
+ },
+ "cdb400df-6679-461c-a592-532c18448b5e": {
+  "display": "Color Render Target",
+  "type": "lightform.enum.color-render-target"
+ },
+ "cfec0c7e-28d3-4306-911e-3e8a540b00c0": {
+  "display": "Storyblocks Sort By",
+  "type": "lightform.enum.storyblocks-sort-by"
+ },
+ "d050c84c-1336-4bad-a9f1-477f62757c98": {
+  "display": "Timeline Tick Times Flag",
+  "type": "lightform.enum.timeline-tick-times-flag"
+ },
+ "d0656904-520f-4dd5-b8b9-ff854cd84f97": {
+  "display": "Type",
+  "type": "lightform.enum.isf-input.type"
+ },
+ "d08ef717-0db4-49ef-a93e-cc6b259cbfef": {
+  "display": "Lightform_Vector2IValueControllerInterface",
+  "type": "lightform.interface.vector2i-value-controller"
+ },
+ "d0cafa3c-c9f1-4ab5-8f0e-5c746e9df0bd": {
+  "display": "QtContentEffectInterface",
+  "type": "lightform.interface.qt-content-effect"
+ },
+ "d1908c27-e94a-434c-9f53-3205694734de": {
+  "display": "Wi Fi Access Point Setting Flag",
+  "type": "lightform.enum.wi-fi-access-point-setting-flag"
+ },
+ "d1f8658c-a06e-455c-8748-fe2635ebea4a": {
+  "display": "Asset Reference Message Type",
+  "type": "lightform.enum.asset-reference-message-type"
+ },
+ "d223ab4c-2f06-4c91-ad19-81406c4517a9": {
+  "display": "Plain Object Reference Value Controller",
+  "type": "lightform.object.value-controller.plain-object-reference"
+ },
+ "d2644d83-a32f-4bee-8b11-6f4f9e5e5eeb": {
+  "display": "fitPerspective",
+  "type": "lightform.object.contel"
+ },
+ "d382223d-1a6d-41ba-980c-8a93ec177ad1": {
+  "display": "Render Fence Sync Status",
+  "type": "lightform.enum.render-fence-sync-status"
+ },
+ "d3cf0f89-a05c-4da7-b980-fbe29c66a01c": {
+  "display": "Matrix4 Value Controller",
+  "type": "lightform.object.value-controller.matrix4"
+ },
+ "d4b9f8e2-e3bd-4312-9b7b-993112aaf891": {
+  "display": "Input Mode Deactivation Reason",
+  "type": "lightform.enum.input-mode-deactivation-reason"
+ },
+ "d598f2af-cb88-4ba3-a926-d404dc8d7114": {
+  "display": "AnyObject Reference Message Class",
+  "type": "lightform.enum.anyobject-reference-message-class"
+ },
+ "d6c955fb-916c-44ce-be5c-2d25239c90cd": {
+  "display": "intrusive_ptr.hpp",
+  "type": "lightform.object.action-manager"
+ },
+ "d7002c42-b968-4057-8a3e-ff4d2d1df658": {
+  "display": "Lightform_GeometryInterface",
+  "type": "lightform.interface.geometry"
+ },
+ "d7ecc88d-ae9b-4706-a191-f37bc124b4a1": {
+  "display": "Plain Float Value Controller",
+  "type": "lightform.object.value-controller.plain-float"
+ },
+ "d7ffac32-a284-4b45-876f-34d6a4510151": {
+  "display": "File System Operation Result",
+  "type": "lightform.enum.project-paths.file-system-operation-result"
+ },
+ "d815247c-7530-4e46-b6ab-e82d6336202f": {
+  "display": "Key Event Flag",
+  "type": "lightform.enum.key-event-flag"
+ },
+ "d8395d92-81d6-4b18-902e-73cc4e7f2a02": {
+  "display": "Lightform_EnumValueControllerInterface",
+  "type": "lightform.interface.enum-value-controller"
+ },
+ "d91c6770-b790-4a5e-9262-27aa47c5827e": {
+  "display": "Modify Mask Mode",
+  "type": "lightform.enum.pixel-input-mode.modify-mask-mode"
+ },
+ "d9b36a84-7b62-45e0-8460-ce059c707970": {
+  "display": "Plain Int64 Value Controller",
+  "type": "lightform.object.value-controller.plain-int64"
+ },
+ "d9c1a523-2ed1-4c68-ba7f-0b794e5f77fc": {
+  "display": "Logger Listener Type",
+  "type": "lightform.enum.logger-listener-type"
+ },
+ "db1c36fa-91ba-40c6-97d5-890cfd974d1b": {
+  "display": "Lightform_AnyObjectSelectionSetInterface",
+  "type": "lightform.interface.anyobject-selection-set"
+ },
+ "db3a2dff-d37c-4ddc-b3d9-226da2090777": {
+  "display": "Canvas",
+  "type": "lightform.object.canvas"
+ },
+ "dbdecc47-b43b-423a-8d1d-e2e15ad1437d": {
+  "display": "Slide",
+  "type": "lightform.object.slide"
+ },
+ "dc49c4fb-1572-46d3-9216-c269848ef029": {
+  "display": "QtLibraryAssetsTabInterface",
+  "type": "lightform.interface.qt-library-assets-tab"
+ },
+ "dd05ca64-673a-44ae-ad2f-a7ab117dddab": {
+  "display": "Lightform_SlideInterface",
+  "type": "lightform.interface.slide"
+ },
+ "ddd74164-8f81-4f71-94e0-61b40e0eb20d": {
+  "display": "Render Resource Access",
+  "type": "lightform.enum.render-resource-access"
+ },
+ "e0ac8a2e-821c-4326-9207-e7e05c915ce3": {
+  "display": "Lightform_ContentEffectCollectionInterface",
+  "type": "lightform.interface.content-effect-collection"
+ },
+ "e0d0cf9b-b4b9-424e-a024-5ba2b6d82d9a": {
+  "display": "Plain Vector4I Value Controller",
+  "type": "lightform.object.value-controller.plain-vector4i"
+ },
+ "e1134798-535c-49c4-884f-bd3ce66592f2": {
+  "display": "Cache Remove Item Reason",
+  "type": "lightform.enum.cache-remove-item-reason"
+ },
+ "e2ac8a98-8303-4ce6-acfe-6dc5c409fc3c": {
+  "display": "audioReactive",
+  "type": "lightform.object.surface"
+ },
+ "e34b6791-6589-4822-b28a-0a8401a40757": {
+  "display": "Parameter Confidence",
+  "type": "lightform.enum.optical-parameters.parameter-confidence"
+ },
+ "e3994ad5-c518-49c1-a864-5cd8f7ce1860": {
+  "display": "Video Decoder Create Result",
+  "type": "lightform.enum.video-decoder-create-result"
+ },
+ "e47ca050-bc87-4721-8733-64569c7ba7ab": {
+  "display": "Render Surface Type",
+  "type": "lightform.enum.render-surface-type"
+ },
+ "e5ce8b98-ab5e-4045-b3c9-1c2dab185f34": {
+  "display": "Lightform_OneTimeUpdateInterface",
+  "type": "lightform.interface.one-time-update"
+ },
+ "e5db97e8-6129-4b38-ae45-fefe0adba465": {
+  "display": "Lightform_Color4fValueControllerInterface",
+  "type": "lightform.interface.color4f-value-controller"
+ },
+ "e663559a-a93a-4c75-8579-aae5934802c1": {
+  "display": "QtPropertyInterface",
+  "type": "lightform.interface.qt-property"
+ },
+ "e6aa7b5a-db94-4e8a-8759-2e7091f798c0": {
+  "display": "Image Cache Decode Mode",
+  "type": "lightform.enum.image-cache-decode-mode"
+ },
+ "e6bd40f1-ecb4-4eb7-b284-2e2239d353e6": {
+  "display": "Vector Graphics Renderer Type",
+  "type": "lightform.enum.vector-graphics-renderer-type"
+ },
+ "e89c7948-90b8-47b8-8ca7-b647d42fa6a4": {
+  "display": "Plain Quaternion Value Controller",
+  "type": "lightform.object.value-controller.plain-quaternion"
+ },
+ "e8cce276-3cca-4eac-b74f-e6e74084c671": {
+  "display": "Storyblocks Download Result",
+  "type": "lightform.enum.storyblocks-download-result"
+ },
+ "e8ecbf95-c637-4425-a45d-25843698b860": {
+  "display": "Plain Angle Value Controller",
+  "type": "lightform.object.value-controller.plain-angle"
+ },
+ "e906e765-3010-4ac8-b2f0-a2fae1df5c3a": {
+  "display": "Key Event Type",
+  "type": "lightform.enum.key-event-type"
+ },
+ "e972866c-b57c-469c-9876-0a137af6f94e": {
+  "display": "Primitive Topology",
+  "type": "lightform.enum.primitive-topology"
+ },
+ "eab148ba-cbe7-460e-8759-ea89b30f8f30": {
+  "display": "Set Action Key Event Mode",
+  "type": "lightform.enum.set-action-key-event-mode"
+ },
+ "eb3aba1e-8098-46f7-b79d-9537b36b4787": {
+  "display": "Application Data Version",
+  "type": "lightform.enum.application-data-version"
+ },
+ "eb4ca7ab-14f9-4b94-b6e5-66cad5a34eed": {
+  "display": "File Operation Result",
+  "type": "lightform.enum.file-operation-result"
+ },
+ "eb627f36-8a6c-41d7-91b9-8e759c2d5ea2": {
+  "display": "Vector3 Value Controller",
+  "type": "lightform.object.value-controller.vector3"
+ },
+ "eb66f2c2-1003-4b23-89da-653998fe468d": {
+  "display": "Depth Test Function",
+  "type": "lightform.enum.depth-test-function"
+ },
+ "eba73e7e-ddbb-4a9f-951e-f228b290416e": {
+  "display": "Render Buffer Usage",
+  "type": "lightform.enum.render-buffer-usage"
+ },
+ "ebbeea81-b6a3-4e06-8e26-dd602b90d6e6": {
+  "display": "Validity Component Flag",
+  "type": "lightform.enum.validity-component-flag"
+ },
+ "ec853132-fde5-49e8-9876-989e6437b162": {
+  "display": "Pixel Format",
+  "type": "lightform.enum.jpeg-reader.pixel-format"
+ },
+ "ec9aac2c-2072-465a-ab06-648ae6252dcf": {
+  "display": "Result",
+  "type": "lightform.enum.asset-registration-response.result"
+ },
+ "ed5622c1-1fc6-41f4-9a3a-b434e1d7dd48": {
+  "display": "Lightform_Vector3ValueControllerInterface",
+  "type": "lightform.interface.vector3-value-controller"
+ },
+ "ede6c6f0-5912-488e-b414-569f133fbba6": {
+  "display": "Shader Stage",
+  "type": "lightform.enum.shader-stage"
+ },
+ "ede6f0e6-cb5b-4639-be13-686ab0942d59": {
+  "display": "Property Visibility",
+  "type": "lightform.enum.property-visibility"
+ },
+ "ee03f122-c2dd-4dff-a746-971603ba95be": {
+  "display": "QtActionManagerInterface",
+  "type": "lightform.interface.qt-action-manager"
+ },
+ "eea2f57e-8e9f-41ea-87b1-264292525110": {
+  "display": "Path ObjectN Gon Create Mouse Input Mode State",
+  "type": "lightform.enum.path-objectn-gon-create-mouse-input-mode-state"
+ },
+ "ef156e95-b55f-4369-a93f-96e56f9ef331": {
+  "display": "QtActionInterface",
+  "type": "lightform.interface.qt-action"
+ },
+ "ef3795fb-56ff-430f-96cf-6b8076cd6f8f": {
+  "display": "Plain String Value Controller",
+  "type": "lightform.object.value-controller.plain-string"
+ },
+ "ef8f1f94-943c-461b-bcad-0fbcdac20f37": {
+  "display": "Project Path",
+  "type": "lightform.enum.project-path"
+ },
+ "f20773cf-6a28-4490-821a-8944f0b705e8": {
+  "display": "Premultiply Alpha",
+  "type": "lightform.enum.premultiply-alpha"
+ },
+ "f2440829-69e1-4d06-8465-d8dc8db67a0a": {
+  "display": "Action",
+  "type": "lightform.object.action"
+ },
+ "f27cc24d-e0ca-4dad-88b4-08ab68b880ad": {
+  "display": "Lightform_DistanceValueControllerInterface",
+  "type": "lightform.interface.distance-value-controller"
+ },
+ "f2effe8a-1fe2-4cee-9e6b-e899e585b521": {
+  "display": "Plain Angle Axis Value Controller",
+  "type": "lightform.object.value-controller.plain-angle-axis"
+ },
+ "f4025fb1-6f4a-402d-b2cd-706591010554": {
+  "display": "Lightform_FileSystemPathValueControllerInterface",
+  "type": "lightform.interface.file-system-path-value-controller"
+ },
+ "f410ae56-aa7f-4535-a1af-81580e17366f": {
+  "display": "Scan Session",
+  "type": "lightform.object.scan-session"
+ },
+ "f47319d5-bf42-40fc-849e-f5632801bf9c": {
+  "display": "Blend Factor",
+  "type": "lightform.enum.blend-factor"
+ },
+ "f5587d3a-5aa3-4fe0-a518-3ed9affbbde0": {
+  "display": "Plain Timeline Duration Value Controller",
+  "type": "lightform.object.value-controller.plain-timeline-duration"
+ },
+ "f5c370db-1f32-4d46-83e7-6160eb319130": {
+  "display": "Add To Cache Result",
+  "type": "lightform.enum.add-to-cache-result"
+ },
+ "f6beb286-4df1-4fa1-b818-12838c01436f": {
+  "display": "Render Thread Mode",
+  "type": "lightform.enum.render-thread-mode"
+ },
+ "f70c16e5-bb44-405c-b46e-b1f4615ab6f8": {
+  "display": "Touch Cache Item Result",
+  "type": "lightform.enum.touch-cache-item-result"
+ },
+ "f7c32474-1496-4b43-aa2d-5b62aebbb3c3": {
+  "display": "Lightform_ApplicationModelInterface",
+  "type": "lightform.interface.application-model"
+ },
+ "f8e66b63-690a-4234-94af-bd5b5764015b": {
+  "display": "Start Result",
+  "type": "lightform.enum.thread.start-result"
+ },
+ "f8e765e4-78fe-4810-ac18-38ed642258fa": {
+  "display": "Compositing Operator",
+  "type": "lightform.enum.compositing-operator"
+ },
+ "f94f96df-b25d-4186-b3a3-70ccc5bd586b": {
+  "display": "Asset Metadata Read Result",
+  "type": "lightform.enum.asset-metadata-read-result"
+ },
+ "f9af01a8-e4d4-431b-8af9-6f47f6a012b4": {
+  "display": "Byte Reader Clone Flag",
+  "type": "lightform.enum.byte-reader-clone-flag"
+ },
+ "fa275d46-eed9-4f43-8733-24b88d2313bf": {
+  "display": "Lightform_HasProjectionInterface",
+  "type": "lightform.interface.has-projection"
+ },
+ "fab1c0b7-8fcf-4dea-9c6c-05579a4c00db": {
+  "display": "Color4u8 Value Controller",
+  "type": "lightform.object.value-controller.color4u8"
+ },
+ "fad9fbc3-e119-4990-b243-e829464aa8e0": {
+  "display": "Lightform_AssetInterface",
+  "type": "lightform.interface.asset"
+ },
+ "faee456d-c2f8-43a9-9d1f-75f2ecce9ada": {
+  "display": "PNG writer warning: %1%",
+  "type": "lightform.enum.png-writer.write-result"
+ },
+ "fb21566e-04ac-466b-be00-13895dcc2e39": {
+  "display": "Contel Type",
+  "type": "lightform.enum.contel-type"
+ },
+ "fb245702-7f75-4408-bb4e-ffb14fcbbc34": {
+  "display": "Error creating project file: %1%",
+  "type": "lightform.enum.project-packager.transition.type"
+ },
+ "fbf60992-b6ce-4354-8823-5ff3f640fbbf": {
+  "display": "Vector Text Alignment",
+  "type": "lightform.enum.vector-text-alignment"
+ },
+ "fcda3727-7c47-405a-b23f-225a187b3204": {
+  "display": "Input Mode Result",
+  "type": "lightform.enum.input-mode-result"
+ },
+ "fd69bbf1-96bd-4f47-b2f5-afddd6132cd1": {
+  "display": "Mouse Event Type",
+  "type": "lightform.enum.mouse-event-type"
+ },
+ "fd96dacd-661e-4ac5-9814-e4a9baef696e": {
+  "display": "Loop Behavior",
+  "type": "lightform.enum.loop-behavior"
+ },
+ "fdcc432e-4ec1-4fd6-916a-af2a066289e2": {
+  "display": "Cache Deserialize Item Result",
+  "type": "lightform.enum.cache-deserialize-item-result"
+ },
+ "fdeff2e4-e8cf-464d-9258-b1ce2c19f0b7": {
+  "display": "Effect Image Type",
+  "type": "lightform.enum.effect-image-type"
+ },
+ "fec743cd-271b-4285-a385-ddebc0320c50": {
+  "display": "Remove Reason Flag",
+  "type": "lightform.enum.remove-reason-flag"
+ },
+ "ff7543d1-9768-4678-8674-ac78618a7bf0": {
+  "display": "String Value Controller",
+  "type": "lightform.object.value-controller.string"
+ }
+}

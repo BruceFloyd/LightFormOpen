@@ -1,0 +1,15 @@
+/target
+**/*.rs.bk
+.DS_Store
+__pycache__/
+*.pyc
+
+# Never commit Lightform's own files or user projects
+*.app/
+/re/
+qrc/
+*.lit
+*.litsettings
+*.litpreset
+Lightform-Built_In-*.zip
+*.pkl

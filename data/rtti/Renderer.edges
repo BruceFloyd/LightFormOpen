@@ -1,0 +1,75 @@
+boost::wrapexcept<boost::bad_function_call>	boost::exception_detail::clone_base	mi
+boost::wrapexcept<boost::bad_function_call>	boost::bad_function_call	mi
+boost::wrapexcept<boost::bad_function_call>	boost::exception	mi
+boost::exception_detail::clone_base	-	root
+boost::bad_function_call	std::runtime_error	si
+boost::detail::sp_counted_base	-	root
+boost::exception	-	root
+Lightform::RenderProxy	-	root
+Lightform::RenderScene	-	root
+Lightform::GLFramebuffer	Lightform::RenderResource	si
+Lightform::RenderManager	-	root
+Lightform::RenderSurface	Lightform::CompositeRenderResource	si
+Lightform::RenderResource	-	root
+Lightform::EnumDescription	Lightform::TypeMetadata	si
+Lightform::MultiTextureSet	Lightform::CompositeRenderResource	si
+Lightform::OpenGLRenderAPI	Lightform::RenderAPIInterface	si
+Lightform::RenderGraphPass	Lightform::RenderGraphOutputPass	si
+Lightform::ContelRenderProxy	Lightform::RenderProxy	mi
+Lightform::ContelRenderProxy	-	mi
+Lightform::CreatorRenderScene	Lightform::RenderScene	si
+Lightform::RenderAPIInterface	-	root
+Lightform::CompiledRenderGraph::Impl::RenderGraphResourceProvider	-	si
+Lightform::CompiledRenderGraph::Impl::RenderGraphTargetAliasProvider	-	si
+Lightform::RenderGraphPassBase	-	root
+Lightform::ViewportRenderProxy	Lightform::RenderProxy	si
+Lightform::CanvasEffectResource	Lightform::CompositeRenderResource	si
+Lightform::RenderGraphOutputPass	Lightform::RenderGraphPassBase	si
+Lightform::RenderGraphUpdatePass	Lightform::RenderGraphPassBase	si
+Lightform::TextureRenderResource	Lightform::BaseTextureRenderResource	si
+Lightform::BlendOpEnumDescription	Lightform::EnumDescription	si
+Lightform::CompositeRenderResource	Lightform::RenderResource	si
+Lightform::Texture3DRenderResource	Lightform::BaseTextureRenderResource	si
+Lightform::ClearTypeEnumDescription	Lightform::EnumDescription	si
+Lightform::MasterSurfaceRenderProxy	Lightform::RenderProxy	mi
+Lightform::MasterSurfaceRenderProxy	-	mi
+Lightform::WriteMaskEnumDescription	Lightform::EnumDescription	si
+Lightform::BaseTextureRenderResource	Lightform::RenderResource	si
+Lightform::BlendFactorEnumDescription	Lightform::EnumDescription	si
+Lightform::PixelFormatEnumDescription	Lightform::EnumDescription	si
+Lightform::ShaderStageEnumDescription	Lightform::EnumDescription	si
+Lightform::TextureChannelEnumDescription	Lightform::EnumDescription	si
+Lightform::RenderFlushTypeEnumDescription	Lightform::EnumDescription	si
+Lightform::SamplerWrapModeEnumDescription	Lightform::EnumDescription	si
+Lightform::StandardSamplerEnumDescription	Lightform::EnumDescription	si
+Lightform::PremultiplyAlphaEnumDescription	Lightform::EnumDescription	si
+Lightform::ColorRenderTargetEnumDescription	Lightform::EnumDescription	si
+Lightform::DepthTestFunctionEnumDescription	Lightform::EnumDescription	si
+Lightform::FBOAttachmentFlagEnumDescription	Lightform::EnumDescription	si
+Lightform::PrimitiveTopologyEnumDescription	Lightform::EnumDescription	si
+Lightform::RenderBufferUsageEnumDescription	Lightform::EnumDescription	si
+Lightform::RenderSurfaceTypeEnumDescription	Lightform::EnumDescription	si
+Lightform::RenderResourceTypeEnumDescription	Lightform::EnumDescription	si
+Lightform::TextureCreateFlagsEnumDescription	Lightform::EnumDescription	si
+Lightform::CanvasRenderUILayerEnumDescription	Lightform::EnumDescription	si
+Lightform::CompositingOperatorEnumDescription	Lightform::EnumDescription	si
+Lightform::VectorTextAlignmentEnumDescription	Lightform::EnumDescription	si
+Lightform::RenderResourceAccessEnumDescription	Lightform::EnumDescription	si
+Lightform::RenderResourceStatusEnumDescription	Lightform::EnumDescription	si
+Lightform::SamplerFilteringModeEnumDescription	Lightform::EnumDescription	si
+Lightform::RenderFenceSyncStatusEnumDescription	Lightform::EnumDescription	si
+Lightform::CompositingSourceFormatEnumDescription	Lightform::EnumDescription	si
+Lightform::RenderGraphVariableTypeEnumDescription	Lightform::EnumDescription	si
+Lightform::RenderResourcePayloadTypeEnumDescription	Lightform::EnumDescription	si
+Lightform::StandardUniformBufferTypeEnumDescription	Lightform::EnumDescription	si
+Lightform::VectorGraphicsRendererTypeEnumDescription	Lightform::EnumDescription	si
+Lightform::ProjectionPreviewEffectModeEnumDescription	Lightform::EnumDescription	si
+std::__1::__function::__base<char const* (unsigned long)>	-	root
+std::__1::__function::__base<void (Lightform::EffectData const&)>	-	root
+std::__1::__function::__base<void (Lightform::Image const&)>	-	root
+std::__1::__function::__base<void ()>	-	root
+std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char>>	std::__1::basic_streambuf<char, std::__1::char_traits<char>>	si
+std::__1::bad_function_call	std::exception	si
+std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char>>	std::__1::basic_iostream<char, std::__1::char_traits<char>>	si
+std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char>>	std::__1::basic_istream<char, std::__1::char_traits<char>>	si
+std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char>>	std::__1::basic_ostream<char, std::__1::char_traits<char>>	si

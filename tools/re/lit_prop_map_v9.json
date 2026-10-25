@@ -1,0 +1,640 @@
+{
+ "path": {
+  "0": [
+   [
+    "points",
+    "plain-vector2"
+   ]
+  ],
+  "1": [
+   [
+    "controlPoints",
+    "plain-vector2"
+   ]
+  ],
+  "2": [
+   [
+    "isHole",
+    "plain-boolean"
+   ]
+  ],
+  "3": [
+   [
+    "isClosed",
+    "plain-boolean"
+   ]
+  ]
+ },
+ "77fb4305-f50b-4e25-979b-860c490676f1": {
+  "0": [
+   [
+    "paths",
+    "plain-object-reference"
+   ]
+  ],
+  "1": [
+   [
+    "invertComposite",
+    "plain-boolean"
+   ]
+  ]
+ },
+ "a799e093-a185-472b-ab1b-1ab789e3e23b": {
+  "0": [
+   [
+    "gridSize",
+    "plain-vector2i"
+   ]
+  ],
+  "1": [
+   [
+    "points",
+    "plain-vector2"
+   ]
+  ],
+  "2": [
+   [
+    "controlPoints",
+    "plain-vector2"
+   ]
+  ],
+  "3": [
+   [
+    "envelope",
+    "plain-vector2"
+   ]
+  ],
+  "4": [
+   [
+    "uneditedEnvelope",
+    "plain-vector2"
+   ]
+  ],
+  "11": [
+   [
+    "size",
+    "plain-vector2"
+   ]
+  ],
+  "12": [
+   [
+    "hasBeenCornerPinned",
+    "plain-boolean"
+   ]
+  ],
+  "13": [
+   [
+    "hasLinearGrid",
+    "plain-boolean"
+   ]
+  ]
+ },
+ "master-surface": {
+  "0": [
+   [
+    "geometries",
+    "plain-object-reference"
+   ]
+  ],
+  "1": [
+   [
+    "structure",
+    "plain-object-reference"
+   ]
+  ],
+  "2": [
+   [
+    "locked",
+    "plain-boolean"
+   ]
+  ],
+  "3": [
+   [
+    "visibleInCanvas",
+    "plain-boolean"
+   ]
+  ],
+  "4": [
+   [
+    "geometryFeatherWidth",
+    "plain-float"
+   ]
+  ],
+  "5": [
+   [
+    "geometryEdgeOffset",
+    "plain-float"
+   ]
+  ],
+  "6": [
+   [
+    "position",
+    "plain-vector2"
+   ]
+  ],
+  "7": [
+   [
+    "rotation",
+    "plain-angle"
+   ]
+  ],
+  "8": [
+   [
+    "scale",
+    "plain-vector2"
+   ]
+  ]
+ },
+ "master-slide": {
+  "0": [
+   [
+    "surfaces",
+    "plain-object-reference"
+   ]
+  ]
+ },
+ "asset": {
+  "0": [
+   [
+    "externalAssetReferenceUrl",
+    "plain-url"
+   ]
+  ],
+  "1": [
+   [
+    "displayName",
+    "plain-string"
+   ]
+  ],
+  "2": [
+   [
+    "scanImageID",
+    "plain-enum"
+   ]
+  ],
+  "3": [
+   [
+    "publishedPresence",
+    "plain-enum"
+   ]
+  ]
+ },
+ "effect": {
+  "0": [
+   [
+    "effectAsset",
+    "plain-object-reference"
+   ]
+  ],
+  "1": [
+   [
+    "shaderProperties",
+    "lightform.object.property-array"
+   ]
+  ]
+ },
+ "contel": {
+  "0": [
+   [
+    "mediaAsset",
+    "plain-object-reference"
+   ]
+  ],
+  "1": [
+   [
+    "effect",
+    "plain-object-reference"
+   ]
+  ],
+  "2": [
+   [
+    "text",
+    "plain-string"
+   ]
+  ],
+  "3": [
+   [
+    "fontFamily",
+    "plain-string"
+   ]
+  ],
+  "4": [
+   [
+    "bold",
+    "plain-boolean"
+   ]
+  ],
+  "5": [
+   [
+    "italic",
+    "plain-boolean"
+   ]
+  ],
+  "6": [
+   [
+    "fontSizePixels",
+    "plain-int64"
+   ]
+  ],
+  "7": [
+   [
+    "textColor",
+    "plain-color4f"
+   ]
+  ],
+  "8": [
+   [
+    "horizontalAlignment",
+    "plain-enum"
+   ]
+  ],
+  "9": [
+   [
+    "verticalAlignment",
+    "plain-enum"
+   ]
+  ],
+  "10": [
+   [
+    "size",
+    "plain-vector2"
+   ]
+  ],
+  "11": [
+   [
+    "transformSpace",
+    "plain-enum"
+   ]
+  ],
+  "12": [
+   [
+    "position",
+    "plain-vector2"
+   ]
+  ],
+  "13": [
+   [
+    "rotation",
+    "plain-angle"
+   ]
+  ],
+  "14": [
+   [
+    "scale",
+    "plain-vector2"
+   ]
+  ],
+  "15": [
+   [
+    "fillColor",
+    "plain-color4f"
+   ]
+  ],
+  "16": [
+   [
+    "borderColor",
+    "plain-color4f"
+   ]
+  ],
+  "17": [
+   [
+    "borderWidth",
+    "plain-float"
+   ]
+  ],
+  "18": [
+   [
+    "borderFeather",
+    "plain-float"
+   ]
+  ],
+  "19": [
+   [
+    "textImageAsset",
+    "plain-object-reference"
+   ]
+  ],
+  "20": [
+   [
+    "contelType",
+    "plain-enum"
+   ]
+  ],
+  "21": [
+   [
+    "videoSpeed",
+    "plain-float"
+   ]
+  ],
+  "22": [
+   [
+    "videoTrimStart",
+    "plain-timeline-time"
+   ]
+  ],
+  "23": [
+   [
+    "videoTrimEnd",
+    "plain-timeline-time"
+   ]
+  ],
+  "24": [
+   [
+    "videoDuration",
+    "plain-timeline-duration"
+   ]
+  ],
+  "25": [
+   [
+    "visibleInCanvas",
+    "plain-boolean"
+   ]
+  ],
+  "26": [
+   [
+    "locked",
+    "plain-boolean"
+   ]
+  ],
+  "28": [
+   [
+    "opacity",
+    "plain-float"
+   ]
+  ],
+  "29": [
+   [
+    "blendMode",
+    "plain-enum"
+   ]
+  ],
+  "30": [
+   [
+    "inheritAlpha",
+    "plain-boolean"
+   ]
+  ],
+  "31": [
+   [
+    "contentEffects",
+    "plain-object-reference"
+   ]
+  ]
+ },
+ "surface": {
+  "0": [
+   [
+    "masterSurface",
+    "plain-object-reference"
+   ]
+  ],
+  "1": [
+   [
+    "contels",
+    "plain-object-reference"
+   ]
+  ],
+  "2": [
+   [
+    "effect",
+    "plain-object-reference"
+   ]
+  ],
+  "4": [
+   [
+    "opacity",
+    "plain-float"
+   ]
+  ],
+  "5": [
+   [
+    "blendMode",
+    "plain-enum"
+   ]
+  ],
+  "6": [
+   [
+    "geometryFillColor",
+    "plain-color4f"
+   ]
+  ],
+  "7": [
+   [
+    "geometryBorderColor",
+    "plain-color4f"
+   ]
+  ],
+  "8": [
+   [
+    "geometryBorderWidth",
+    "plain-float"
+   ]
+  ],
+  "11": [
+   [
+    "contentEffects",
+    "plain-object-reference"
+   ]
+  ]
+ },
+ "slide": {
+  "0": [
+   [
+    "masterSlide",
+    "plain-object-reference"
+   ]
+  ],
+  "1": [
+   [
+    "duration",
+    "plain-timeline-duration"
+   ]
+  ],
+  "2": [
+   [
+    "outOfBoundsBehavior",
+    "plain-enum"
+   ]
+  ],
+  "3": [
+   [
+    "surfaces",
+    "plain-object-reference"
+   ]
+  ],
+  "4": [
+   [
+    "effect",
+    "plain-object-reference"
+   ]
+  ],
+  "6": [
+   [
+    "publishingEnabled",
+    "plain-boolean"
+   ]
+  ],
+  "7": [
+   [
+    "fadeIn",
+    "plain-boolean"
+   ]
+  ],
+  "8": [
+   [
+    "fadeOut",
+    "plain-boolean"
+   ]
+  ]
+ },
+ "canvas": {
+  "0": [
+   [
+    "masterSlides",
+    "plain-object-reference"
+   ]
+  ],
+  "1": [
+   [
+    "slides",
+    "plain-object-reference"
+   ]
+  ],
+  "2": [
+   [
+    "activeSlide",
+    "plain-object-reference"
+   ]
+  ],
+  "3": [
+   [
+    "activeSurface",
+    "plain-object-reference"
+   ]
+  ],
+  "4": [
+   [
+    "artboardSize",
+    "plain-vector2i"
+   ]
+  ],
+  "5": [
+   [
+    "backgroundDisplayMode",
+    "plain-enum"
+   ]
+  ],
+  "6": [
+   [
+    "backgroundOpacity",
+    "plain-float"
+   ]
+  ],
+  "7": [
+   [
+    "backgroundFill",
+    "plain-float"
+   ]
+  ],
+  "8": [
+   [
+    "backgroundBrightness",
+    "plain-float"
+   ]
+  ],
+  "11": [
+   [
+    "artboardRotation",
+    "plain-enum"
+   ]
+  ],
+  "12": [
+   [
+    "artboardFlipHorizontal",
+    "plain-boolean"
+   ]
+  ],
+  "13": [
+   [
+    "artboardFlipVertical",
+    "plain-boolean"
+   ]
+  ],
+  "14": [
+   [
+    "globalEffectEdgeThreshold",
+    "plain-float"
+   ]
+  ]
+ },
+ "scan-session": {
+  "0": [
+   [
+    "scanImageAssets",
+    "plain-object-reference"
+   ]
+  ],
+  "1": [
+   [
+    "timestamp",
+    "plain-date-time"
+   ]
+  ],
+  "2": [
+   [
+    "deviceScanID",
+    "plain-uuid"
+   ]
+  ],
+  "3": [
+   [
+    "projectorDimensions",
+    "plain-vector2i"
+   ]
+  ],
+  "4": [
+   [
+    "disparityValid",
+    "plain-boolean"
+   ]
+  ],
+  "5": [
+   [
+    "deviceName",
+    "plain-string"
+   ]
+  ]
+ },
+ "project": {
+  "0": [
+   [
+    "canvas",
+    "plain-object-reference"
+   ]
+  ],
+  "1": [
+   [
+    "deviceName",
+    "plain-string"
+   ]
+  ],
+  "5": [
+   [
+    "referencedAssets",
+    "plain-object-reference"
+   ]
+  ],
+  "6": [
+   [
+    "scanSessions",
+    "plain-object-reference"
+   ]
+  ],
+  "7": [
+   [
+    "activeScanSession",
+    "plain-object-reference"
+   ]
+  ]
+ }
+}
