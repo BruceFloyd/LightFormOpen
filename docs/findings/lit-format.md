@@ -20,7 +20,7 @@ Samples used (six user-authored projects, not distributed; copies were analysed,
 
 `~/Library/Application Support/Lightform/Lightform Creator/ApplicationSettings.litsettings` was also decoded.
 
-Reader: `tools/re/litdump.py`. It decodes all 6 projects and the settings file with no undecoded values.
+Reader: `tools/re/litdump.py`. It decodes all 6 projects and the settings file with no undecoded values. The Rust crate `lf-lit` implements the same reading plus a binary writer, and is checked against this script (§6).
 
 ```
 python3 -I litdump.py "X.lit" --registry lit_class_registry.json [--tree] > X.json
@@ -76,10 +76,11 @@ Top-level stream **[O]**:
 04 max-bytes-per-line=i64 0xFFFFFFFF
 01 header{ data-version-number=u32 23, original-data-version-number=u32 23 } 02
 01 id-lookup{ count=u32 N, values=[N × uuid16] } 02
-01 objects{ count=u32 M, (01 object{…} 02) × M } 02
+01 objects{ count=u32 G, (01 object{…} 02) × M } 02
 03
 ```
 
+- **Object count [O].** `objects/count` (G) is not the number of object chunks (M). It is the size of Creator's in-memory graph: M plus the distinct `owner-id`s that have no object chunk, which are the static Property objects data version 23 doesn't write. This holds exactly in all three binary samples (92 = 49 + 43, 1432 = 797 + 635, 110 = 56 + 54). A writer must compute it the same way.
 - **ID interning [O].** Every UUID in the document is written once into `id-lookup`. All later id/class-id/owner-id/subtype-id/reference fields are `u32` indices into that table.
 - **[O]** Interning order follows writing order (self, owner, class), so the class and owner UUIDs are mixed in with the object ids.
 
@@ -293,7 +294,7 @@ Library zips **[O]**:
 
 - **[O]** Two independent version axes:
   - container `format-version` / `formatVersion`: 1 in both containers.
-  - schema `data-version-number`: 9 in the 2020 JSON projects, 23 in the 2022 binary projects. `original-data-version-number` records the version a document was created at.
+  - schema `data-version-number`: 9 or 10 in the 2020 JSON projects (one sample is 10), 23 in the 2022 binary projects. `original-data-version-number` records the version a document was created at.
 - **[I]** The app migrates on load. Evidence:
   - The string "Project structure data migration" (help URL in urls.json).
   - Class names with obsolete/retired fields: `obsoleteHighlighted`, `obsoleteColor`, `retiredShaderProperties`, `obsoleteGeometryFeatherWidth`, `obsoleteGeometryEdgeOffset`.
@@ -305,7 +306,19 @@ Library zips **[O]**:
 - **[O]** Local-ids are stable across versions: 0 type conflicts.
 - **[U]** Exact per-version migration steps, whether v23 can still write JSON (`DataChunkWriterStyle` enum suggests a choice [I]), and what `max-bytes-per-line` controls. The last is probably JSON line wrapping; the binary file stores 0xFFFFFFFF.
 
-## 6. Implications for a Rust port
+## 6. Rust implementation (`crates/lf-lit`)
+
+Status, checked against all six sample projects and the settings file:
+- Binary v23 documents read and write back **byte-identical** (3 unique files).
+- JSON v9/v10 documents read, write as binary, and read back with **identical objects** (4 unique files).
+- Every value decodes with the built-in class registry; none fall back to raw bytes.
+- `lf lit dump` output matches `litdump.py --registry` on every object (9,197 objects, 0 differences; f32 values compared at f32 precision).
+
+**Not yet proven:** that Creator opens a file `lf-lit` has *changed*. Byte-identical rewrites of unedited files don't exercise the object-count formula, new id-table entries, or new objects against Creator's own reader. Writing a JSON v9 project as binary checks the codec only; it is not an upgrade path, since it produces a binary file at data version 9, which Creator may never have written (Creator migrates v9 itself on load). See SPEC.md Phase 0.
+
+The reader is strict: an unknown tag, key, chunk or field order is an error naming the chunk path, so format surprises surface instead of being skipped. Run the sample check with `LF_LIT_SAMPLES=<folder> cargo test -p lf-lit --test samples`, or `lf lit roundtrip FILE...`.
+
+## 7. Implications for a Rust port
 
 - Write one generic chunk codec with two backends (binary and lenient JSON), a UUID-interning table, and the `h*33+c` key hash.
 - Model documents as an `AnyObject` graph: id, class, owner, state, references. Map class UUIDs to typed structs through the slot tables in §3b.

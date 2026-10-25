@@ -3,7 +3,11 @@ name = "lf-lit"
 description = "Reader and writer for Lightform Creator .lit project files"
 version.workspace = true
 edition.workspace = true
+rust-version.workspace = true
 license.workspace = true
 repository.workspace = true
 
 [dependencies]
+serde_json = { version = "1", features = ["preserve_order"] }
+thiserror = "2"
+uuid = "1"

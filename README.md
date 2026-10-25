@@ -2,7 +2,7 @@
 
 An open-source Rust replacement for Lightform Creator, the desktop app for Lightform LF1/LF2 projection-mapping projectors. Lightform shut down and its cloud services are offline, but the devices still work over the local network. The goal is to keep them usable.
 
-**Status:** early. The reverse-engineering spec is complete enough to start building; the Rust crates are skeletons.
+**Status:** early. The reverse-engineering spec is complete enough to start building. `lf-lit` reads and writes project files; the other crates are skeletons.
 
 ## What's here
 
@@ -13,7 +13,7 @@ An open-source Rust replacement for Lightform Creator, the desktop app for Light
 | `proto/` | gRPC schema recovered from the app's embedded protobuf descriptors. |
 | `tools/re/` | Python tools: `.lit` reader (`litdump.py`), Qt resource extractor, descriptor and RTTI extractors. |
 | `data/rtti/` | Class lists and inheritance edges recovered from the app's binaries. |
-| `crates/lf-lit` | `.lit` project reader/writer (planned). |
+| `crates/lf-lit` | `.lit` project reader/writer: reads both containers, writes binary, byte-identical round trips. |
 | `crates/lf-device` | Device discovery, control and upload (planned). |
 | `apps/lf-cli` | Command-line driver, binary name `lf`. |
 
@@ -31,7 +31,8 @@ Details and open questions are in `docs/SPEC.md`.
 
 ```bash
 cargo build
-cargo run --bin lf
+cargo run --bin lf -- lit dump "My Project.lit"
+cargo run --bin lf -- lit roundtrip "My Project.lit"
 ```
 
 The tools in `tools/re/` need only Python 3.
