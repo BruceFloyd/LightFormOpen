@@ -15,3 +15,4 @@ path = "src/main.rs"
 lf-lit = { path = "../../crates/lf-lit" }
 lf-device = { path = "../../crates/lf-device" }
 serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "sync", "time"] }

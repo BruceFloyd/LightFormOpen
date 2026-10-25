@@ -58,7 +58,7 @@ The code is the class around `0x10055a8b0` to `0x10055c900` (`ApplicationPairing
 
 ## 3. MetaRPC: gRPC control channel [O]
 
-- Recovered schema: `proto/MetaRPC.proto` (proto3, package `metarpc`, 191 messages, 1162 lines, extracted from the embedded `FileDescriptorProto` at `0xfc6f70`).
+- Recovered schema: `proto/MetaRPC.proto` (proto3, package `metarpc`, 191 messages, extracted from the embedded `FileDescriptorProto` at `0xfc6f70`). `DataFlag` reuses values (`FIRST`, `LAST`, `NONE`) and the descriptor sets `allow_alias = true` on it; early extractions dropped that option, which protobuf compilers reject.
 - Service: `service MetaRPC { rpc Talk(stream MetaRPCMessage) returns (stream MetaRPCMessage); }`. That's one bidirectional stream.
 - Connection (`0x10056e900`–`0x10056f1a1`):
   - Target `"<host>:50050"`. If that fails, it retries `"<host>:50051"`, with both stored in the same slot [I fallback order].
@@ -91,7 +91,7 @@ The code is the class around `0x10055a8b0` to `0x10055c900` (`ApplicationPairing
   - Scan: `StartScan{StartScanSettings}`, `CancelScan`.
   - Livelight (live drawing, NDI): `LivelightOn{fbW,fbH}`, `LivelightOff`, `LivelightSetCursorProperties`, `LivelightSetCursorPosition`, `LivelightVectorSceneFullUpdate{VectorScene}`, `LivelightSetNdiSource{sourceName}`, `LivelightClearNdiSource`.
   - Oaklight (object mode): `OaklightOn{mode}`, `OaklightOff`, `OaklightSetObject{projectId}`, `OaklightSetCustomObject`, `RemoveAllCustomObjectFiles`.
-  - Replies are mostly `{Response response}`, where `Response{Result{string result} | Error{ErrorType,message}}`. Exceptions are `GetHdmiGeometryCorrectionReply{GeometryCorrection}` and a few that use field 1.
+  - **Most replies are empty** [O]: of the 73 reply messages, only five carry `Response result = 1` (`SetGlobalVolume`, `SetObjectCoordinates`, `OaklightOn`, `OaklightSetObject`, `OaklightSetCustomObject`), where `Response{Result{string result} | Error{ErrorType,message}}`. `GetHdmiGeometryCorrectionReply` carries a `GeometryCorrection`. So a failed command can't usually report an error in its reply; how failures surface (no reply, a gRPC status, a state push) is **[U]**.
 - **State pushes (device → Creator), 13 total.** Each one corresponds to a `DataFlag` bit, delivered after `Subscribe`:
   - `DisplayStateChanged`: HDMI cable, resolution and available list, `CameraModel`, camera firmware, light engine on.
   - `NetworkStateChanged`: hostname, ethernet or wifi, client or AP mode, active SSID, known and available networks.
@@ -195,3 +195,24 @@ Implications for a port: everything in §2–§9 except firmware download is LAN
 8. Port 7500 `/bug-report` contents: likely a device log bundle, which is useful for debugging.
 9. Firmware OTA: whether the device's update servers are still reachable. If not, the update path is dead regardless of Creator. Don't trigger an update until this is known.
 10. Pairing-mode behaviour: whether discovery works on the device AP or Creator only uses 192.168.0.1, and whether `connect_new_wifi` is still the path for current firmware.
+
+## 13. Rust implementation (`crates/lf-device`)
+
+Status: written against the recovered schema and tested only against an in-process mock device built from that schema. **No real device has been contacted yet.** The tests show the client and the schema agree, not that firmware behaves this way.
+
+- **Discovery** sends Creator's query to 224.0.0.251, every interface's broadcast address and any `--host`, on port 7350, from a socket bound to 7351 with address and port reuse, so it can run alongside Creator. It keeps each raw reply. On macOS, a send blocked by Local Network privacy is reported as such rather than as "no devices".
+- **Control** opens `/metarpc.MetaRPC/Talk` on 50050 then 50051 with `api-version: 1.3.2` and Creator's keepalive settings, and confirms the session with `TestConnection`. Replies are matched by `messageId`, and their oneof tag must equal the request's. Every reply wait has a timeout, because most replies are empty and a failed command may never be answered.
+- **State pushes** arrive as events. Each is acknowledged with an empty `clientReply` of the same id; that ack is inferred from the envelope, and can be turned off.
+- **Raw frames** are kept for everything received. A frame whose re-encoding doesn't reproduce its bytes had fields the schema doesn't know: the sign of different field numbers in the firmware. `lf device status HOST --trace` hex-dumps those.
+- **Exposed commands** are discovery, status, play, pause, stop, next, previous, slide index and brightness. Reboot, reset, pairing, Wi-Fi, firmware and scan commands exist in the generated types but are deliberately not wrapped or exposed in the CLI. The HTTP upload (port 7346) waits for Phase 0 to pin down the body format and `Content-MD5` encoding.
+
+First live connection (read-only), in order:
+
+```bash
+lf device discover --timeout 5
+lf device status <ip> --seconds 15 --trace
+```
+
+Quit Creator first: with port sharing, macOS delivers each unicast reply to only one of the sockets bound to 7351, so a running Creator may take them. `status` keeps the session open even if the first reply doesn't decode, and prints its bytes; if the device drops the stream right after its first push, retry with `--no-ack`.
+
+Check that discovery's raw reply matches §2, which port answered, the device's `api-version`, and that the pushes decode with no `--trace` output. Only then try `play`/`pause`.

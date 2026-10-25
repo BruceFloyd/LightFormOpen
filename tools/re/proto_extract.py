@@ -78,6 +78,10 @@ def render_enum(b, ind):
     name = next(s(v) for f, _, v in fs if f == 1)
     out = [f'{ind}enum {name} {{']
     for f, _, v in fs:
+        # EnumOptions (field 3): allow_alias (field 2) permits repeated values
+        if f == 3 and dict((ff, vv) for ff, _, vv in fields(v)).get(2):
+            out.append(f'{ind}  option allow_alias = true;')
+    for f, _, v in fs:
         if f == 2:
             ev = dict((ff, vv) for ff, _, vv in fields(v))
             num = ev.get(2, 0)

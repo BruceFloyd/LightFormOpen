@@ -56,12 +56,12 @@ Phase 1 gets a working Rust tool that drives your projector within weeks. Each l
 
 Fallback if the app won't run: derive the package layout from `PublishManager`/`DeviceHTTPRequests` in Hopper.
 1. Run Creator (under Rosetta) and use "Publish to local folder" on one sample project. That gives a real package and `manifest.json`.
-2. Capture one discovery, connect and upload with a packet capture.
+2. Connect read-only with LightFormOpen first: `lf device discover`, then `lf device status <ip> --trace` (see `device-protocol.md` §13). Then capture one discovery, connect and upload from Creator with a packet capture.
 3. Open a project edited by `lf-lit` in Creator: change one value in a copy (a slide name, say) with the Rust writer and confirm Creator loads it with the change. That's the first proof the writer works beyond unchanged round trips.
 4. Optionally, open each 2020 JSON project in Creator and save it. That gives v23 binaries of known content: more round-trip samples and ground truth for the v9→v23 migration.
 5. Work through the remaining live checks in `device-protocol.md` §12. **Don't trigger a firmware update**: whether the device's update servers still exist is unknown.
 
-**Phase 1: `lf-device` crate + CLI.** Discover, connect, subscribe to state, list slides, play/pause/brightness, and upload a package produced by the original app. This proves hardware control end to end in Rust.
+**Phase 1: `lf-device` crate + CLI (control written and mock-tested; upload pending Phase 0).** Discover, connect, subscribe to state, list slides, play/pause/brightness, and upload a package produced by the original app. This proves hardware control end to end in Rust.
 
 **Phase 2: `lf-lit` crate (reader/writer done; see `lit-format.md` §6).** Read v9 and v23 projects. Round-trip v23 byte-for-byte on the samples, keeping unknown slots verbatim. Add asset resolution for `localassetlibrary:///` (Built_In zips + `.reference` redirects), `relativefile:///` and `file:///`.
 
